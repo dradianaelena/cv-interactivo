@@ -1,0 +1,3178 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana Elena Draguna | ADE & Data Science · Portfolio Profesional</title>
+  <meta name="description" content="Portfolio profesional de Diana Elena Draguna. Doble Grado en ADE y Data Science en ESIC University, perfil internacional (KEDGE Bordeaux, Irlanda), experiencia en Carrefour, Campofrío y El Corte Inglés.">
+  <meta name="author" content="Diana Elena Draguna">
+
+  <!-- Favicon SVG con monograma DD -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23b45309'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='15' fill='white'>DD</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            warm: {
+              50: '#faf8f5',
+              100: '#f5f2eb',
+              200: '#e8e3da',
+              300: '#dcd6cb',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#121110',
+            },
+            accent: {
+              warm: '#b45309',
+              amber: '#d97706',
+              gold: '#92400e',
+              teal: '#0f766e',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================================
+   DIANA ELENA DRAGUNA — PORTFOLIO PROFESIONAL INTERACTIVO
+   Diseño: Cálido, Neutro, Seguro, Ordenado y Minimalista Ejecutivo
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Paleta Cálida y Neutra (Transmite seguridad, serenidad y orden) */
+  --bg-page: #faf8f5;
+  --bg-page-subtle: #f4efe8;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --border-color: rgba(220, 214, 203, 0.75);
+  
+  /* Acentos Cálidos Sofisticados */
+  --accent-warm: #b45309;       /* Ámbar tostado / Terracota suave */
+  --accent-warm-light: #fef3c7;
+  --accent-gold: #92400e;
+  --accent-navy: #1e293b;       /* Pizarra neutro / marino profundo */
+  --accent-sage: #0f766e;       /* Salvia neutro para métricas */
+  
+  /* Textos Neutros de Alto Contraste */
+  --text-primary: #1c1917;     /* Stone 900 */
+  --text-secondary: #44403c;   /* Stone 700 */
+  --text-muted: #78716c;       /* Stone 500 */
+  
+  /* Sombras Suaves y Ordenadas */
+  --glass-shadow: 0 8px 24px -6px rgba(41, 37, 36, 0.05), 0 2px 4px -1px rgba(41, 37, 36, 0.03);
+  --glass-shadow-lg: 0 20px 40px -12px rgba(41, 37, 36, 0.09);
+  --modal-overlay: rgba(28, 25, 23, 0.75);
+}
+
+.dark {
+  --bg-page: #121110;
+  --bg-page-subtle: #191817;
+  --bg-card: rgba(28, 25, 23, 0.85);
+  --bg-card-hover: rgba(41, 37, 36, 0.95);
+  --border-color: rgba(68, 64, 60, 0.6);
+  --text-primary: #fafaf9;
+  --text-secondary: #d6d3d1;
+  --text-muted: #a8a29e;
+  --accent-warm: #d97706;
+  --accent-warm-light: #451a03;
+  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --glass-shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  --modal-overlay: rgba(10, 9, 8, 0.92);
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Iluminación de Fondo Cálida y Sutil */
+.ambient-glow-warm-1 {
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.07) 0%, rgba(217, 119, 6, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-warm-2 {
+  position: absolute;
+  top: 35%;
+  left: -8%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.05) 0%, rgba(180, 83, 9, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-warm-3 {
+  position: absolute;
+  bottom: 8%;
+  right: -8%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.05) 0%, rgba(15, 118, 110, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Paneles Glassmorphism Cálidos */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  background: var(--bg-card-hover);
+  box-shadow: var(--glass-shadow-lg);
+  border-color: rgba(180, 83, 9, 0.35);
+}
+
+.glass-nav {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark .glass-nav {
+  background: rgba(18, 17, 16, 0.88);
+  border-bottom: 1px solid rgba(68, 64, 60, 0.6);
+}
+
+/* Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.775rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+/* Estilo para las imágenes de experiencia (delicadas, no gigantes, ordenadas) */
+.exp-thumbnail-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.875rem;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  box-shadow: 0 4px 12px -2px rgba(41, 37, 36, 0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.exp-thumbnail-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -4px rgba(41, 37, 36, 0.1);
+  border-color: rgba(180, 83, 9, 0.4);
+}
+
+.exp-thumbnail-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.exp-thumbnail-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Fotos ampliables con Lightbox */
+.zoomable-photo {
+  cursor: zoom-in !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.zoomable-photo:hover {
+  transform: scale(1.02);
+  filter: brightness(1.02);
+  box-shadow: 0 8px 24px -4px rgba(180, 83, 9, 0.25);
+}
+
+.lightbox-img-container {
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carruseles con Flechas */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.carousel-slide,
+.kedge-slide,
+.immersion-slide {
+  display: none;
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-slide.active,
+.kedge-slide.active,
+.immersion-slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #1c1917;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(220, 214, 203, 0.8);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.dark .carousel-nav-btn {
+  background: rgba(28, 25, 23, 0.88);
+  color: #fafaf9;
+  border: 1px solid rgba(68, 64, 60, 0.8);
+}
+
+.carousel-nav-btn:hover {
+  background: #ffffff;
+  color: #b45309;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.dark .carousel-nav-btn:hover {
+  background: #292524;
+  color: #f59e0b;
+}
+
+.carousel-nav-prev {
+  left: 0.75rem;
+}
+
+.carousel-nav-next {
+  right: 0.75rem;
+}
+
+/* CHATBOT INTERACTIVO FLOTANTE */
+#chatbot-toggle-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: #1c1917;
+  color: #fafaf9;
+  box-shadow: 0 10px 25px -4px rgba(28, 25, 23, 0.35);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark #chatbot-toggle-btn {
+  background: #292524;
+  color: #fafaf9;
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
+#chatbot-toggle-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px -4px rgba(180, 83, 9, 0.3);
+}
+
+#chatbot-window {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.5rem;
+  width: 90vw;
+  max-width: 400px;
+  height: 540px;
+  max-height: 80vh;
+  z-index: 50;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 60px -15px rgba(28, 25, 23, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark #chatbot-window {
+  background: #1c1917;
+  border-color: rgba(68, 64, 60, 0.8);
+  color: #fafaf9;
+}
+
+#chatbot-window.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.chat-bubble {
+  max-width: 82%;
+  padding: 0.65rem 0.95rem;
+  border-radius: 1rem;
+  font-size: 0.825rem;
+  line-height: 1.45;
+}
+
+.chat-bubble-bot {
+  background: #f4efe8;
+  color: #1c1917;
+  border-bottom-left-radius: 0.25rem;
+  border: 1px solid rgba(220, 214, 203, 0.7);
+}
+
+.dark .chat-bubble-bot {
+  background: #292524;
+  color: #fafaf9;
+  border-color: rgba(68, 64, 60, 0.7);
+}
+
+.chat-bubble-user {
+  background: #b45309;
+  color: #ffffff;
+  border-bottom-right-radius: 0.25rem;
+  margin-left: auto;
+}
+
+/* Modales */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-overlay);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 880px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35);
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .modal-dialog {
+  background: #1c1917;
+  border-color: rgba(68, 64, 60, 0.8);
+  color: #fafaf9;
+}
+
+.modal-backdrop.active .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* QR Card */
+.qr-container {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qr-container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glass-shadow-lg);
+  border-color: rgba(180, 83, 9, 0.4);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 120;
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.65);
+}
+
+
+/* ==========================================================================
+   MEJORAS GEMINI API KEY Y CHATBOT EN PRIMERA PERSONA
+   ========================================================================== */
+#gemini-settings-panel {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chat-bubble-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.dark .chat-bubble-error {
+  background: #450a0a;
+  color: #fecaca;
+  border-color: #7f1d1d;
+}
+
+.gemini-pill-active {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+}
+
+.dark .gemini-pill-active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #34d399;
+}
+
+</style>
+</head>
+
+<body class="antialiased selection:bg-amber-600 selection:text-white relative min-h-screen text-stone-900 dark:text-stone-100 bg-[#faf8f5] dark:bg-[#121110]">
+
+  <!-- Iluminación Ambiental Cálida -->
+  <div class="ambient-glow-warm-1"></div>
+  <div class="ambient-glow-warm-2"></div>
+  <div class="ambient-glow-warm-3"></div>
+
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN SUPERIOR
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 w-full glass-nav transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo / Identidad -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-800 via-amber-700 to-amber-600 flex items-center justify-center text-white font-extrabold text-base shadow-sm group-hover:scale-105 transition-transform duration-200">
+            DD
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-base tracking-tight text-stone-900 dark:text-white leading-tight">Diana Elena Draguna</span>
+            <span class="text-xs font-medium text-stone-500 dark:text-stone-400">ADE & Data Science · ESIC University</span>
+          </div>
+        </a>
+
+        <!-- Menú de Navegación de Escritorio -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#hero" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Sobre Mí</a>
+          <a href="#proyectos" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Proyectos</a>
+          <a href="#habilidades" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Habilidades</a>
+          <a href="#kedge" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">KEDGE (Bordeaux)</a>
+          <a href="#internacional" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Inmersión & Idiomas</a>
+          <a href="#educacion-datos" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Educación & TFG</a>
+          <a href="#liderazgo" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Liderazgo & Certs</a>
+          <a href="#contacto" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-stone-600 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Botones de Acción (Tema + Descargar CV) -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <button id="theme-toggle" aria-label="Cambiar tema de color" class="p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg id="theme-icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+
+          <a href="cv%20antigravity%20.pdf" download="CV_Diana_Elena_Draguna.pdf" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 text-xs sm:text-sm font-semibold shadow-sm transition-all">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Descargar CV</span>
+          </a>
+
+          <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú Móvil -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-stone-200 dark:border-stone-800 flex flex-col gap-2 text-sm">
+        <a href="#hero" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Sobre Mí</a>
+        <a href="#proyectos" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Proyectos</a>
+        <a href="#habilidades" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Habilidades</a>
+        <a href="#kedge" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">KEDGE (Bordeaux)</a>
+        <a href="#internacional" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Inmersión & Idiomas</a>
+        <a href="#educacion-datos" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Educación & TFG</a>
+        <a href="#liderazgo" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Liderazgo & Certificaciones</a>
+        <a href="#contacto" class="mobile-nav-link px-3 py-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800">Contacto & WhatsApp</a>
+        <a href="cv%20antigravity%20.pdf" download="CV_Diana_Elena_Draguna.pdf" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-700 text-white font-semibold">
+          <span>Descargar CV Oficial</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO / PRESENTACIÓN: FOTO ESTRUCTURADA Y AMPLIABLE + VÍDEO INTRO REAL
+       ========================================================================== -->
+  <section id="hero" class="relative pt-10 pb-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Columna Izquierda: Presentación y Tarjeta de Perfil Estructurada (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Tarjeta de Perfil Integrada y Ordenada (Foto ampliable con clic) -->
+          <div class="p-4 sm:p-5 rounded-2xl glass-panel border border-stone-200/90 dark:border-stone-700/80 flex items-center gap-4 sm:gap-5">
+            <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-amber-600/40 shadow-md flex-shrink-0 bg-stone-100 group">
+              <img src="images/foto_cv.jpg" alt="Diana Elena Draguna" data-caption="Diana Elena Draguna · Doble Grado en ADE & Data Science" class="zoomable-photo w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-1 right-1 bg-black/60 rounded-md p-1 text-white text-[9px] pointer-events-none">🔍</div>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+                <span class="text-xs font-semibold text-stone-600 dark:text-stone-400">Perfil Analítico & Dirección</span>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-stone-900 dark:text-white leading-tight">Diana Elena Draguna</h2>
+              <p class="text-xs text-stone-500 dark:text-stone-400">Doble Grado en ADE y Data Science · ESIC University</p>
+            </div>
+          </div>
+
+          <!-- Titular Principal -->
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 text-xs font-semibold">
+              <span>Resolución de Problemas mediante Datos, Automatización y Rigor</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-stone-900 dark:text-white leading-[1.15]">
+              Iniciativa para transformar procesos, <span class="text-amber-700 dark:text-amber-400">visión analítica y mentalidad global.</span>
+            </h1>
+          </div>
+
+          <!-- Narrativa de Impacto -->
+          <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+            Estudiante con marcado perfil internacional, proactiva y orientada a la resolución ordenada de retos empresariales. Con experiencia contrastada en <strong class="text-stone-900 dark:text-white font-semibold">Carrefour</strong> (donde asumí la iniciativa de automatizar 6 procesos en Python), <strong class="text-stone-900 dark:text-white font-semibold">Campofrío</strong> (controlling comercial en SAP) y <strong class="text-stone-900 dark:text-white font-semibold">El Corte Inglés</strong> (procesos As-Is/To-Be y forecasting). Intercambio Erasmus en <strong class="text-amber-700 dark:text-amber-400 font-semibold">KEDGE (Bordeaux) con nota 8,63/10</strong> e inmersión lingüística en Irlanda.
+          </p>
+
+          <!-- Datos de Contacto Rápidos -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-stone-500 dark:text-stone-400 pt-1">
+            <span class="inline-flex items-center gap-1 font-medium">📍 Madrid, España</span>
+            <span>•</span>
+            <button class="copy-email-btn hover:text-amber-700 dark:hover:text-amber-400 font-medium">✉️ dragunadianaelena@gmail.com</button>
+            <span>•</span>
+            <button class="copy-phone-btn hover:text-amber-700 dark:hover:text-amber-400 font-medium">📞 +34 680 19 84 67</button>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/dianaelenadraguna" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700 dark:hover:text-amber-400 font-medium underline">LinkedIn</a>
+          </div>
+
+          <!-- Métricas Clave -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center">
+              <span class="text-2xl font-extrabold text-amber-700 dark:text-amber-400 block">6</span>
+              <span class="text-[11px] text-stone-500 font-medium">Procesos Python Automatizados</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center">
+              <span class="text-2xl font-extrabold text-teal-700 dark:text-teal-400 block">8.63</span>
+              <span class="text-[11px] text-stone-500 font-medium">Nota Erasmus KEDGE</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center">
+              <span class="text-2xl font-extrabold text-stone-800 dark:text-stone-200 block">5</span>
+              <span class="text-[11px] text-stone-500 font-medium">Certificaciones Oficiales</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-center">
+              <span class="text-2xl font-extrabold text-amber-800 dark:text-amber-300 block">3</span>
+              <span class="text-[11px] text-stone-500 font-medium">Idiomas (ES · RO · EN)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Contenedor con Vídeo Real de Elevator Pitch de Diana (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="glass-panel p-4 rounded-2xl border border-stone-200 dark:border-stone-700 shadow-xl space-y-3">
+            
+            <div class="flex items-center justify-between pb-2 border-b border-stone-200/80 dark:border-stone-700/80 text-xs">
+              <span class="font-bold text-amber-800 dark:text-amber-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span>ELEVATOR PITCH · INTRODUCCIÓN</span>
+              </span>
+              <span class="text-[11px] font-mono text-stone-500">Diana Elena Draguna</span>
+            </div>
+
+            <!-- Reproductor del Vídeo Real -->
+            <div class="video-container-custom relative bg-stone-950 rounded-xl overflow-hidden aspect-video mx-auto border border-stone-800 shadow-inner group">
+              <video id="hero-intro-video" class="w-full h-full object-cover" poster="images/poster_elevator_pitch.jpg" preload="metadata" playsinline controls>
+                <source src="video/elevator_pitch.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de vídeo.
+              </video>
+
+              <!-- Botón flotante inicial de Play -->
+              <button class="video-play-overlay-btn absolute inset-0 m-auto w-16 h-16 rounded-full bg-amber-700/80 hover:bg-amber-600 text-white flex items-center justify-center shadow-xl backdrop-blur-sm transition-all hover:scale-110 cursor-pointer z-10" aria-label="Reproducir Elevator Pitch">
+                <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+
+            <p class="text-center text-[11px] text-stone-500 dark:text-stone-400">
+              Elevator Pitch: Visión analítica, rigor y orientación a resultados.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 1: PROYECTOS & EXPERIENCIA PROFESIONAL (VÍDEO DE PROYECTO REAL)
+       ========================================================================== -->
+  <section id="proyectos" class="py-16 bg-[#f5f2eb] dark:bg-[#191817] border-y border-stone-200/80 dark:border-stone-800">
+    <div id="experiencia" class="scroll-mt-24"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">Proyectos Clave & Trayectoria Laboral</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          Proyectos y Experiencia Profesional: Iniciativa e Impacto Real
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+          Resultados comprobados en automatización de procesos mediante código, controlling de márgenes comerciales y análisis funcional de sistemas. <em>(Haz clic en cualquier foto para ampliarla en alta definición)</em>.
+        </p>
+      </div>
+
+      <!-- CASO 1: CARREFOUR & PROYECTO DESTACADO -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Texto Descriptivo Extendido (7 cols) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-700 dark:text-amber-400 uppercase">Centros Comerciales Carrefour · Proyecto Destacado</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">Automatización de Reporting & Rendimiento Comercial</h3>
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-medium border border-stone-200 dark:border-stone-700">
+              Beca Captación FF&SS · Madrid, España
+            </span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/70 dark:border-amber-800/40 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+            <strong class="text-amber-800 dark:text-amber-300 font-semibold block mb-1">Iniciativa Propia en Automatización con Python:</strong>
+            Asumí de forma autónoma la iniciativa de automatizar <strong>6 procesos críticos de reporting comercial</strong> que anteriormente se realizaban de forma manual en hojas de cálculo dispersas. Desarrollé scripts en <strong>Python</strong> dentro del entorno <strong>Spyder</strong> utilizando la librería <strong>Pandas</strong>, reduciendo los tiempos de procesamiento manual del equipo en un <strong>85%</strong> y eliminando el riesgo de errores humanos en el volcado de datos.
+          </div>
+
+          <div class="space-y-2 text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Reporting Comercial Carrefour PASS:</strong> 
+                Elaboración periódica y consolidación de informes comerciales para monitorizar la evolución de campañas, altas de clientes y volumen financiado a través de la tarjeta Carrefour PASS.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Análisis de Comportamiento del Consumidor:</strong> 
+                Análisis cuantitativo del desempeño promocional y patrones de compra de los clientes para apoyar la toma de decisiones estratégicas del departamento comercial y de marketing.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Materiales de Formación y Comunicación a Tiendas:</strong> 
+                Diseño de presentaciones ejecutivas y materiales formativos claros para los equipos y gestores de hipermercado, facilitando la comprensión de procesos y la ejecución operativa de nuevas campañas.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono text-stone-500">
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Python 3</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Pandas ETL</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Spyder IDE</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Carrefour PASS</span>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Vídeo del Proyecto Destacado + Foto Carrefour (5 cols) -->
+        <div class="lg:col-span-5 space-y-3">
+          
+          <!-- Contenedor del Vídeo del Proyecto -->
+          <div class="rounded-2xl border border-stone-200 dark:border-stone-700 shadow-md bg-white dark:bg-stone-900 p-3 space-y-2">
+            <div class="flex items-center justify-between text-xs pb-1 border-b border-stone-100 dark:border-stone-800">
+              <span class="font-bold text-amber-800 dark:text-amber-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span>VÍDEO DE PROYECTO · CARREFOUR PASS</span>
+              </span>
+              <span class="text-[10px] font-mono text-stone-500">Presentación Ejecutiva</span>
+            </div>
+
+            <div class="video-container-custom relative bg-stone-950 rounded-xl overflow-hidden aspect-video border border-stone-800 shadow-inner group">
+              <video class="w-full h-full object-cover" poster="images/poster_proyecto.jpg" preload="metadata" playsinline controls>
+                <source src="video/proyecto_destacado.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de vídeo.
+              </video>
+              <button class="video-play-overlay-btn absolute inset-0 m-auto w-14 h-14 rounded-full bg-amber-700/80 hover:bg-amber-600 text-white flex items-center justify-center shadow-xl backdrop-blur-sm transition-all hover:scale-110 cursor-pointer z-10" aria-label="Reproducir vídeo de Proyecto Carrefour PASS">
+                <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+
+            <p class="text-center text-[11px] text-stone-500 dark:text-stone-400">
+              Diana presentando el cuadro de mando de reporting y toma de decisiones.
+            </p>
+          </div>
+
+          <!-- Foto Carrefour (Ampliable) -->
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm bg-white dark:bg-stone-900 flex items-center gap-3 p-2 group">
+            <img src="images/carrefour.png" alt="Carrefour Captación Servicios Financieros" data-caption="Carrefour · Beca Captación FF&SS y Automatización con Python" class="zoomable-photo w-16 h-12 rounded-lg object-cover cursor-pointer flex-shrink-0">
+            <div class="flex-1 min-w-0">
+              <span class="text-xs font-bold text-stone-800 dark:text-stone-200 truncate block">Carrefour PASS Reporting</span>
+              <span class="text-[11px] text-stone-500 flex items-center gap-1">Servicios Financieros · <span class="text-amber-700 dark:text-amber-400 font-semibold cursor-pointer">🔍 Ver imagen</span></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CASO 2: CAMPOFRÍO FOOD GROUP -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Foto Campofrío (Ampliable) -->
+        <div class="lg:col-span-4 order-2 lg:order-1">
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm bg-white dark:bg-stone-900 group">
+            <img src="images/campofrio.jpg" alt="Campofrío Food Group Controlling Comercial" data-caption="Campofrío Food Group · Controlling Comercial, Márgenes y SAP" class="zoomable-photo w-full h-52 object-cover">
+            <div class="p-3 text-center border-t border-stone-100 dark:border-stone-800 text-xs font-medium text-stone-600 dark:text-stone-400 flex items-center justify-center gap-1.5">
+              <span>Controlling Comercial · SAP & IBIS</span>
+              <span class="text-amber-700 dark:text-amber-400 text-[11px] font-bold">🔍 Ampliar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto Descriptivo Extendido (8 cols) -->
+        <div class="lg:col-span-8 space-y-4 order-1 lg:order-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-700 dark:text-amber-400 uppercase">Campofrío Food Group</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">Beca Controlling Área Comercial</h3>
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-medium border border-stone-200 dark:border-stone-700">
+              Septiembre 2025 - Febrero 2026 · Madrid, España
+            </span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-teal-50/80 dark:bg-teal-950/30 border border-teal-200/70 dark:border-teal-800/40 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+            <strong class="text-teal-800 dark:text-teal-300 font-semibold block mb-1">Controlling de Gestión y Análisis de Rentabilidad:</strong>
+            Gestión y seguimiento riguroso de <strong>KPIs comerciales y análisis minucioso de márgenes y descuentos</strong> por cliente y canal (Retail, Foodservice y Exportación), proporcionando datos fiables y modelos analíticos para el soporte directo a las decisiones del comité directivo.
+          </div>
+
+          <div class="space-y-2 text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Cuadros de Mando en SAP, IBIS y Excel:</strong> 
+                Desarrollo y actualización periódica de dashboards comerciales e informes de ventas integrando datos del ERP <strong>SAP</strong> con el software de inteligencia de ventas <strong>IBIS</strong> y modelos financieros en Excel avanzado.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Auditoría de Condiciones Comerciales y Rappels:</strong> 
+                Revisión minuciosa de la facturación emitida a clientes estratégicos, garantizando la correcta aplicación de promociones pactadas, provisiones contables y liquidación de rappels por volumen contractual.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Participación en Cierres Contables Mensuales:</strong> 
+                Intervención directa en los procesos de cierre contable mensual del departamento comercial, verificando pedidos, facturas pendientes y periodificaciones de ingresos/gastos asegurando el cuadre exacto de las cuentas.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono text-stone-500">
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">SAP ERP</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">IBIS Sales</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Excel Avanzado</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Cierre Contable</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CASO 3: EL CORTE INGLÉS -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Texto Descriptivo Extendido (8 cols) -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-700 dark:text-amber-400 uppercase">Centros El Corte Inglés</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">Beca Analista de Negocios</h3>
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-medium border border-stone-200 dark:border-stone-700">
+              Madrid, España
+            </span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-stone-100 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 text-xs sm:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+            <strong class="text-stone-900 dark:text-stone-100 font-semibold block mb-1">Enlace Estratégico Negocio y Tecnología (TI):</strong>
+            Actué como puente directo entre los responsables de áreas comerciales y el equipo técnico informático. Levanté, analicé y documenté <strong>requisitos funcionales y técnicos</strong> para traducir las necesidades de negocio en especificaciones precisas para el desarrollo de software.
+          </div>
+
+          <div class="space-y-2 text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Mapeo de Procesos As-Is / To-Be:</strong> 
+                Mapeé y evalué procesos de negocio detectando cuellos de botella e ineficiencias de comunicación entre áreas, diseñando nuevos flujos de trabajo más ágiles y eficientes.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Pruebas de Aceptación de Usuario (UAT):</strong> 
+                Definí y ejecuté casos de prueba de aceptación de usuario (UAT) para validar que los módulos y desarrollos informáticos entregados cumplieran rigurosamente con los requisitos operativos del negocio.
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-teal-600 font-bold mt-0.5">▪</span>
+              <div>
+                <strong class="text-stone-900 dark:text-white">Forecasting y Rentabilidad Comercial:</strong> 
+                Construí modelos de pronóstico estadístico para estimar tendencias de demanda, volumen de ventas y evaluación de márgenes por campaña y canal.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono text-stone-500">
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">As-Is / To-Be</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">UAT Testing</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Forecasting de Demanda</span>
+            <span class="px-2.5 py-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Gestión TI</span>
+          </div>
+        </div>
+
+        <!-- Foto El Corte Inglés (Ampliable) -->
+        <div class="lg:col-span-4">
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm bg-white dark:bg-stone-900 group">
+            <img src="images/corteingles.png" alt="El Corte Inglés Analista de Negocios" data-caption="El Corte Inglés · Análisis de Negocios, UAT y Procesos As-Is / To-Be" class="zoomable-photo w-full h-52 object-cover">
+            <div class="p-3 text-center border-t border-stone-100 dark:border-stone-800 text-xs font-medium text-stone-600 dark:text-stone-400 flex items-center justify-center gap-1.5">
+              <span>Análisis Funcional y Procesos</span>
+              <span class="text-amber-700 dark:text-amber-400 text-[11px] font-bold">🔍 Ampliar</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 2: HABILIDADES TÉCNICAS, DATA SCIENCE & INTELIGENCIA ARTIFICIAL
+       ========================================================================== -->
+  <section id="habilidades" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-teal-700 dark:text-teal-400">Competencias Analíticas & Tech Stack</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          Habilidades Técnicas, Data Science & Inteligencia Artificial
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+          Dominio de modelado cuantitativo, pipelines de automatización de datos, business intelligence y soluciones de inteligencia artificial aplicada.
+        </p>
+      </div>
+
+      <!-- Grid Habilidades: Vídeo a la izquierda (5 cols) + Matriz de Competencias a la derecha (7 cols) -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Columna Izquierda: Reproductor del Vídeo de Habilidades (5 cols) -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="rounded-2xl border border-stone-200 dark:border-stone-700 shadow-md bg-white dark:bg-stone-900 p-3 space-y-2">
+            <div class="flex items-center justify-between text-xs pb-1 border-b border-stone-100 dark:border-stone-800">
+              <span class="font-bold text-teal-700 dark:text-teal-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>VÍDEO DE HABILIDADES · DATA & AI</span>
+              </span>
+              <span class="text-[10px] font-mono text-stone-500">Tech & Analytics</span>
+            </div>
+            
+            <div class="video-container-custom relative bg-stone-950 rounded-xl overflow-hidden aspect-video border border-stone-800 shadow-inner group">
+              <video class="w-full h-full object-cover" poster="images/poster_habilidades.jpg" preload="metadata" playsinline controls>
+                <source src="video/habilidades.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de vídeo.
+              </video>
+              <button class="video-play-overlay-btn absolute inset-0 m-auto w-14 h-14 rounded-full bg-teal-700/80 hover:bg-teal-600 text-white flex items-center justify-center shadow-xl backdrop-blur-sm transition-all hover:scale-110 cursor-pointer z-10" aria-label="Reproducir vídeo de Habilidades Técnicas">
+                <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+            
+            <p class="text-center text-[11px] text-stone-500 dark:text-stone-400">
+              Interacción con arquitecturas neuronales, modelado analítico y toma de decisiones.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Matriz Estructurada de Competencias (7 cols) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <!-- 1. Programación & Data Science -->
+            <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                <strong class="text-stone-900 dark:text-white font-bold">Programación & Data Science</strong>
+              </div>
+              <p class="text-stone-600 dark:text-stone-400 text-[11px] leading-relaxed">
+                Scripts automatizados ETL en <strong>Python</strong> (Pandas, NumPy, Spyder) y modelación econométrica y estadística en <strong>R</strong>.
+              </p>
+              <div class="flex flex-wrap gap-1 text-[10px] font-mono text-stone-600 dark:text-stone-300">
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Python 3</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Pandas</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">R Studio</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Spyder</span>
+              </div>
+            </div>
+
+            <!-- 2. Business Intelligence & Reporting -->
+            <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+                <strong class="text-stone-900 dark:text-white font-bold">Business Intelligence & Reporting</strong>
+              </div>
+              <p class="text-stone-600 dark:text-stone-400 text-[11px] leading-relaxed">
+                Diseño de cuadros de mando ejecutivos en <strong>Power BI</strong> (DAX, Power Query) y analítica web en <strong>Google Analytics 4</strong>.
+              </p>
+              <div class="flex flex-wrap gap-1 text-[10px] font-mono text-stone-600 dark:text-stone-300">
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Power BI</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">DAX</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">GA4</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">ETL</span>
+              </div>
+            </div>
+
+            <!-- 3. ERP, Controlling & Finanzas -->
+            <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-700"></span>
+                <strong class="text-stone-900 dark:text-white font-bold">ERP, Controlling & Finanzas</strong>
+              </div>
+              <p class="text-stone-600 dark:text-stone-400 text-[11px] leading-relaxed">
+                Gestión comercial y facturación en <strong>SAP ERP</strong>, analítica en <strong>IBIS</strong> y modelos financieros en <strong>Excel Avanzado</strong>.
+              </p>
+              <div class="flex flex-wrap gap-1 text-[10px] font-mono text-stone-600 dark:text-stone-300">
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">SAP ERP</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">IBIS Sales</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Excel Adv.</span>
+              </div>
+            </div>
+
+            <!-- 4. Cloud, IA & Metodologías -->
+            <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-700"></span>
+                <strong class="text-stone-900 dark:text-white font-bold">Cloud, IA & Metodologías</strong>
+              </div>
+              <p class="text-stone-600 dark:text-stone-400 text-[11px] leading-relaxed">
+                Infraestructura <strong>Azure (AZ-900)</strong>, cargas de <strong>Azure AI (AI-900)</strong>, mapeo <strong>As-Is / To-Be</strong> y pruebas <strong>UAT</strong>.
+              </p>
+              <div class="flex flex-wrap gap-1 text-[10px] font-mono text-stone-600 dark:text-stone-300">
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Azure Cloud</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">Azure AI</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">As-Is/To-Be</span>
+                <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stone-800">UAT</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 3: KEDGE BUSINESS SCHOOL (BORDEAUX, FRANCIA) — CARRUSEL EXCLUSIVO
+       ========================================================================== -->
+  <section id="kedge" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">Excelencia Internacional · Erasmus</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          KEDGE Business School (Bordeaux, Francia)
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+          Intercambio académico en Management superado con una calificación media de <strong>8,63 / 10</strong>. Explora con las flechitas las 3 fotos del campus y la experiencia en Burdeos. <em>(Haz clic en cualquier foto para ampliarla)</em>.
+        </p>
+      </div>
+
+      <!-- Carrusel Exclusivo de KEDGE (3 fotos con flechas < y >) -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Carrusel Visual KEDGE (7 cols) -->
+          <div class="lg:col-span-7">
+            <div class="carousel-container relative bg-stone-900 aspect-[16/10] max-h-[380px] w-full rounded-xl overflow-hidden shadow-lg border border-stone-200 dark:border-stone-700">
+              
+              <!-- Foto 1 KEDGE -->
+              <div class="kedge-slide active w-full h-full">
+                <img src="images/foto_kedge.jpg" alt="KEDGE Business School Bordeaux Campus" data-caption="KEDGE Business School · Campus Bordeaux (Triple Corona: EQUIS, AMBA, AACSB)" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Foto 2 KEDGE -->
+              <div class="kedge-slide w-full h-full">
+                <img src="images/foto_kedge1.jpg" alt="KEDGE Trabajo en Equipo y Presentaciones" data-caption="KEDGE Business School · Trabajo en equipo multicultural y presentaciones ejecutivas" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Foto 3 KEDGE -->
+              <div class="kedge-slide w-full h-full">
+                <img src="images/foto_kedge2.jpg" alt="KEDGE Experiencia Erasmus en Bordeaux" data-caption="KEDGE Business School · Experiencia Erasmus internacional en Burdeos" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Flechas Anterior y Siguiente -->
+              <button id="kedge-prev-btn" aria-label="Foto anterior de KEDGE" class="carousel-nav-btn carousel-nav-prev">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <button id="kedge-next-btn" aria-label="Foto siguiente de KEDGE" class="carousel-nav-btn carousel-nav-next">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </button>
+
+              <!-- Contador de fotos -->
+              <div id="kedge-counter" class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-black/60 text-white text-xs font-mono backdrop-blur-sm z-10">
+                1 / 3
+              </div>
+            </div>
+
+            <!-- Leyenda y Puntos de Navegación -->
+            <div class="flex items-center justify-between pt-3 text-xs">
+              <div id="kedge-caption" class="text-stone-600 dark:text-stone-300 font-medium truncate max-w-sm">
+                <!-- Inyectado por JS -->
+              </div>
+              <div id="kedge-dots" class="flex items-center gap-1.5">
+                <!-- Inyectado por JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Información de KEDGE (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-amber-700 dark:text-amber-400 uppercase">Febrero 2025 - Mayo 2025</span>
+              <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs font-extrabold">
+                Nota: 8,63 / 10
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Intercambio Erasmus en Management</h3>
+            
+            <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+              Estancia académica de alta exigencia en una institución con la prestigiosa <strong>Triple Corona internacional (EQUIS, AMBA, AACSB)</strong>. Cursos impartidos íntegramente en inglés orientados a la gestión sostenible, la estrategia global y la negociación en equipos de diversas nacionalidades.
+            </p>
+
+            <div class="space-y-2 pt-1 text-xs">
+              <span class="font-bold text-stone-800 dark:text-stone-200 block uppercase tracking-wider">Cursos Clave Superados con Distinción:</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="p-2.5 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                  <span class="font-semibold text-stone-900 dark:text-white block">Responsible Management & CSR</span>
+                  <span class="text-[11px] text-stone-500">Métricas ESG y sostenibilidad</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                  <span class="font-semibold text-stone-900 dark:text-white block">Luxury Marketing</span>
+                  <span class="text-[11px] text-stone-500">Gestión de marca y valor global</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                  <span class="font-semibold text-stone-900 dark:text-white block">Cross-Cultural Management</span>
+                  <span class="text-[11px] text-stone-500">Liderazgo de equipos multiculturales</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+                  <span class="font-semibold text-stone-900 dark:text-white block">CSR & Intl. Development</span>
+                  <span class="text-[11px] text-stone-500">Cadenas de valor éticas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 3: INMERSIÓN LINGÜÍSTICA EN IRLANDA (CARRUSEL 4 FOTOS) & IDIOMAS
+       ========================================================================== -->
+  <section id="internacional" class="py-16 bg-[#f5f2eb] dark:bg-[#191817] border-y border-stone-200/80 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-teal-700 dark:text-teal-400">Inmersión & Competencias Lingüísticas</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          Estancia en Irlanda & Perfil Trilingüe
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+          Usa las flechitas para ver las <strong>4 fotos de la inmersión en Bray (Irlanda)</strong> con el programa Interway. <em>(Haz clic en cualquier foto para ampliarla)</em>.
+        </p>
+      </div>
+
+      <!-- Carrusel de Inmersión (4 fotos con flechas < y >) -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Carrusel Visual Inmersión (7 cols) -->
+          <div class="lg:col-span-7">
+            <div class="carousel-container relative bg-stone-900 aspect-[16/10] max-h-[380px] w-full rounded-xl overflow-hidden shadow-lg border border-stone-200 dark:border-stone-700">
+              
+              <!-- Slide 1 -->
+              <div class="immersion-slide active w-full h-full">
+                <img src="images/inmersion.jpg" alt="Inmersión en Irlanda Bray 1" data-caption="Inmersión en Bray & Dublín · Convivencia y aprendizaje anglófono" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="immersion-slide w-full h-full">
+                <img src="images/inmersion_1.jpg" alt="Inmersión en Irlanda Bray 2" data-caption="Programa Interway · Adaptación sociocultural y autonomía personal" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="immersion-slide w-full h-full">
+                <img src="images/inmersion_2.jpg" alt="Inmersión en Irlanda Bray 3" data-caption="Inmersión en Irlanda · Comunicación intercultural y fluidez en inglés" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="immersion-slide w-full h-full">
+                <img src="images/inmersion_3.jpg" alt="Inmersión en Irlanda Bray 4" data-caption="Irlanda · Programa intensivo de perfeccionamiento lingüístico" class="zoomable-photo w-full h-full object-cover">
+              </div>
+
+              <!-- Flechas Anterior y Siguiente -->
+              <button id="immersion-prev-btn" aria-label="Foto anterior de inmersión" class="carousel-nav-btn carousel-nav-prev">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <button id="immersion-next-btn" aria-label="Foto siguiente de inmersión" class="carousel-nav-btn carousel-nav-next">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </button>
+
+              <!-- Contador -->
+              <div id="immersion-counter" class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-black/60 text-white text-xs font-mono backdrop-blur-sm z-10">
+                1 / 4
+              </div>
+            </div>
+
+            <!-- Leyenda y Puntos de Navegación -->
+            <div class="flex items-center justify-between pt-3 text-xs">
+              <div id="immersion-caption" class="text-stone-600 dark:text-stone-300 font-medium truncate max-w-sm">
+                <!-- Inyectado por JS -->
+              </div>
+              <div id="immersion-dots" class="flex items-center gap-1.5">
+                <!-- Inyectado por JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Información de la Estancia & Idiomas (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-xs font-mono font-bold text-teal-700 dark:text-teal-400 uppercase">Interway · Bray & Dublín, Irlanda</span>
+            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Estancia de Inmersión Lingüística e Internacional</h3>
+            
+            <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+              Programa intensivo de un mes para el perfeccionamiento del idioma inglés y la adaptación sociocultural en un entorno anglófono nativo. Experiencia decisiva para el desarrollo de la <strong>autonomía personal</strong>, la <strong>resolución espontánea de situaciones</strong> y la fluidez comunicativa en entornos internacionales.
+            </p>
+
+            <!-- 3 Idiomas -->
+            <div class="space-y-2 pt-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-stone-500 block">Competencia Lingüística Trilingüe:</span>
+              <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                <div class="p-2.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm">
+                  <span class="font-bold text-stone-900 dark:text-white block">Castellano</span>
+                  <span class="text-[10px] text-amber-700 dark:text-amber-400 font-semibold">Nativo</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm">
+                  <span class="font-bold text-stone-900 dark:text-white block">Rumano</span>
+                  <span class="text-[10px] text-amber-700 dark:text-amber-400 font-semibold">Nativo</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm">
+                  <span class="font-bold text-stone-900 dark:text-white block">Inglés</span>
+                  <span class="text-[10px] text-teal-700 dark:text-teal-400 font-semibold">Intermedio/Avanzado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 4: EDUCACIÓN UNIVERSITARIA, COMPETENCIAS ANALÍTICAS & TFG
+       ========================================================================== -->
+  <section id="educacion-datos" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">Formación Universitaria & TFG</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          Educación, Competencias Analíticas y Trabajo de Fin de Grado
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
+          Doble Grado en ESIC University (ADE + Data Science) y presentación del Trabajo de Fin de Grado (TFG) sobre liderazgo e innovación en Amazon.
+        </p>
+      </div>
+
+      <!-- Tarjeta Principal de Educación en ESIC + TFG -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Texto Descriptivo y TFG (7 cols) -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono font-bold text-stone-500 uppercase">ESIC University · Madrid, España</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">Grado en ADE y Título Superior en Data Science</h3>
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold border border-stone-200 dark:border-stone-700">
+              Septiembre 2022 - Actualidad · Nota: 7,1 / 10
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+            Doble titulación universitaria estructurada para dominar tanto la toma de decisiones empresariales como la modelación matemática, la analítica predictiva y la arquitectura de datos.
+          </p>
+
+          <!-- Asignaturas Relevantes -->
+          <div class="space-y-2 pt-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 block">Asignaturas Relevantes Clave:</span>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700">Sistemas de Información de Gestión</span>
+              <span class="px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700">Visualización de Datos</span>
+              <span class="px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700">Patrones de Consumo</span>
+              <span class="px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700">Métodos de Decisión Empresarial</span>
+              <span class="px-3 py-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700">Modelación Estadística con R</span>
+            </div>
+          </div>
+
+          <!-- TARJETA DESTACADA DEL TFG (TRABAJO DE FIN DE GRADO) -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200/90 dark:border-amber-800/70 space-y-3 mt-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-mono font-bold text-amber-800 dark:text-amber-300 uppercase">Trabajo de Fin de Grado (TFG) · ESIC</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-200/60 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 font-semibold">Curso 2025/2026</span>
+            </div>
+            
+            <h4 class="text-base sm:text-lg font-bold text-stone-900 dark:text-white leading-snug">
+              “Impacto del Liderazgo en Amazon: Cultura, Innovación y Gestión del Talento”
+            </h4>
+
+            <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+              Investigación empírica y analítica sobre cómo el estilo de liderazgo transformacional y la obsesión por el cliente de Jeff Bezos han impulsado el crecimiento exponencial de Amazon desde una librería online hasta un líder de la economía digital. Metodología mixta con <strong>encuesta cuantitativa a 170 participantes</strong> (escala Likert) y entrevistas internas a empleados sobre cultura y bienestar laboral.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <button data-evidence="tfg" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-700 hover:bg-amber-600 text-white text-xs font-bold shadow-sm transition-all hover:scale-105 cursor-pointer">
+                <span>📄 Ver Vista Previa del TFG</span>
+              </button>
+              <a href="tfg%20DEFINNITIVO%20.pdf" download="TFG_Diana_Elena_Draguna_Liderazgo_Amazon.pdf" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-amber-700/60 hover:bg-amber-100 dark:hover:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-bold transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Descargar PDF (1.0 MB)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fotos de ESIC (Ampliables con clic) (5 cols) -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm bg-white dark:bg-stone-900 group">
+            <img src="images/esic.png" alt="ESIC University Grado ADE & Data Science" data-caption="ESIC University · Grado en ADE y Título Superior en Data Science" class="zoomable-photo w-full h-48 object-cover">
+            <div class="p-2 text-center text-[11px] font-medium text-stone-500 flex items-center justify-center gap-1">
+              <span>Campus ESIC</span>
+              <span class="text-amber-700 font-bold">🔍</span>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm bg-white dark:bg-stone-900 group">
+            <img src="images/esic1.jpg" alt="ESIC University Proyectos y Vida Académica" data-caption="ESIC University · Formación analítica y proyectos universitarios" class="zoomable-photo w-full h-48 object-cover">
+            <div class="p-2 text-center text-[11px] font-medium text-stone-500 flex items-center justify-center gap-1">
+              <span>Proyectos ESIC</span>
+              <span class="text-amber-700 font-bold">🔍</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 5: CERTIFICACIONES, VOLUNTARIADO Y DEPORTES (FOTO DEPORTES VISIBLE Y AMPLIABLE)
+       ========================================================================== -->
+  <section id="liderazgo" class="py-16 bg-[#f5f2eb] dark:bg-[#191817] border-y border-stone-200/80 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Encabezado -->
+      <div class="max-w-3xl space-y-2">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">Valores, Disciplina & Certificaciones</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-white">
+          Certificaciones Oficiales, Voluntariado y Deportes
+        </h2>
+      </div>
+
+      <!-- Certificaciones Grid -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between text-xs">
+          <span class="font-bold text-stone-700 dark:text-stone-300">Certificaciones Técnicas Oficiales</span>
+          <button data-evidence="certifications" class="text-amber-700 dark:text-amber-400 font-bold hover:underline">Ver temarios ➔</button>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
+          <div class="p-3 rounded-xl glass-panel text-center space-y-1">
+            <span class="text-[10px] font-mono text-amber-700 block">Microsoft 2026</span>
+            <span class="font-bold text-stone-900 dark:text-white block">Azure Fundamentals</span>
+            <span class="text-[10px] text-stone-500">AZ-900</span>
+          </div>
+          <div class="p-3 rounded-xl glass-panel text-center space-y-1">
+            <span class="text-[10px] font-mono text-amber-700 block">Microsoft 2026</span>
+            <span class="font-bold text-stone-900 dark:text-white block">Azure AI Fund.</span>
+            <span class="text-[10px] text-stone-500">AI-900</span>
+          </div>
+          <div class="p-3 rounded-xl glass-panel text-center space-y-1">
+            <span class="text-[10px] font-mono text-teal-700 block">Google 2025</span>
+            <span class="font-bold text-stone-900 dark:text-white block">Google Analytics</span>
+            <span class="text-[10px] text-stone-500">GA4</span>
+          </div>
+          <div class="p-3 rounded-xl glass-panel text-center space-y-1">
+            <span class="text-[10px] font-mono text-teal-700 block">ESIC 2024</span>
+            <span class="font-bold text-stone-900 dark:text-white block">Power BI Dashboards</span>
+            <span class="text-[10px] text-stone-500">DAX & ETL</span>
+          </div>
+          <div class="p-3 rounded-xl glass-panel text-center space-y-1">
+            <span class="text-[10px] font-mono text-stone-600 block">Microsoft 2023</span>
+            <span class="font-bold text-stone-900 dark:text-white block">Excel Associate</span>
+            <span class="text-[10px] text-stone-500">Modelado Financiero</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voluntariado & Deportes (con Foto de Deportes visible y ampliable) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Voluntariado -->
+        <div class="glass-panel p-6 rounded-2xl space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xl">🤝</span>
+              <h3 class="text-base font-bold text-stone-900 dark:text-white">Voluntariado con Propósito</h3>
+            </div>
+            <ul class="space-y-2 text-xs text-stone-600 dark:text-stone-300">
+              <li class="p-3 rounded-lg bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700">
+                <strong class="text-stone-900 dark:text-white block mb-0.5">Comunidad de Sant'Egidio:</strong>
+                <span>Preparación y reparto de alimentos para personas en situación de calle y apoyo logístico en comedores navideños en Madrid.</span>
+              </li>
+              <li class="p-3 rounded-lg bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700">
+                <strong class="text-stone-900 dark:text-white block mb-0.5">Residencia Amavir Pozuelo (MásESIC):</strong>
+                <span>Dinamización lúdica y acompañamiento afectivo a personas mayores, fortaleciendo la escucha y la empatía intergeneracional.</span>
+              </li>
+            </ul>
+          </div>
+          <p class="text-[11px] text-stone-500 italic pt-1">
+            Compromiso ético y vocación de servicio que enriquecen el trabajo en equipo.
+          </p>
+        </div>
+
+        <!-- Deportes con Foto Directamente Visible y Ampliable -->
+        <div class="glass-panel p-6 rounded-2xl space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🏀</span>
+            <h3 class="text-base font-bold text-stone-900 dark:text-white">Deportes & Liderazgo de Alto Rendimiento</h3>
+          </div>
+
+          <!-- Foto de Deportes Visible y Ampliable con clic -->
+          <div class="rounded-xl overflow-hidden border border-stone-200 dark:border-stone-700 shadow-sm max-h-48 w-full bg-stone-900 group relative">
+            <img src="images/deportes.jpg" alt="Deportes Diana Baloncesto y Competición" data-caption="Deportes & Liderazgo · Capitana de Baloncesto (La Salle) y Competición en Natación y Tenis" class="zoomable-photo w-full h-44 object-cover object-top">
+            <div class="absolute bottom-2 right-2 bg-black/60 rounded-md px-2 py-0.5 text-white text-[10px] pointer-events-none flex items-center gap-1">
+              <span>🔍 Ampliar</span>
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-xs text-stone-600 dark:text-stone-300">
+            <li class="p-2.5 rounded-lg bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700">
+              <strong class="text-stone-900 dark:text-white block">Baloncesto: Capitana del Equipo Escolar</strong>
+              <span>La Salle Sagrado Corazón. Experiencia directa liderando el equipo, toma de decisiones tácticas bajo presión de tiempo y fomento de la confianza colectiva.</span>
+            </li>
+            <li class="p-2.5 rounded-lg bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700">
+              <strong class="text-stone-900 dark:text-white block">Natación y Tenis de Competición</strong>
+              <span>Ciudad de la Raqueta y torneos escolares. Disciplina individual, alta tolerancia a la frustración y hábito de superación constante.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN DE CONTACTO CON CÓDIGO QR PARA ACCEDER A WHATSAPP (+34 680 19 84 67)
+       ========================================================================== -->
+  <footer id="contacto" class="py-16 bg-stone-900 text-stone-100 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="max-w-2xl mx-auto text-center space-y-2">
+        <span class="text-xs font-mono font-bold uppercase text-amber-400 tracking-wider">Contacto Directo</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">¿Hablamos?</h2>
+        <p class="text-xs sm:text-sm text-stone-400">
+          Escanea el código QR desde tu móvil para escribirme directamente por WhatsApp o pulsa en cualquiera de las vías de contacto.
+        </p>
+      </div>
+
+      <!-- Tarjeta Principal con Código QR para WhatsApp -->
+      <div class="max-w-md mx-auto p-6 rounded-2xl bg-stone-800/90 border border-stone-700/80 shadow-2xl flex flex-col items-center text-center space-y-4">
+        
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-700/60 text-emerald-400 text-xs font-bold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>WhatsApp Directo</span>
+        </div>
+
+        <!-- Contenedor del Código QR SVG generado -->
+        <div class="p-3 bg-white rounded-xl shadow-md border border-stone-300 w-48 h-48 flex items-center justify-center">
+          <img src="images/whatsapp_qr.svg" alt="Código QR WhatsApp Diana Elena Draguna" class="w-full h-full object-contain">
+        </div>
+
+        <div class="space-y-1">
+          <span class="text-xs text-stone-400 block">Escanea con tu cámara o pulsa el botón:</span>
+          <a href="https://wa.me/34680198467?text=Hola%20Diana,%20he%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md transition-all hover:scale-105">
+            <span>Abrir Chat de WhatsApp</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          </a>
+          <span class="text-xs font-mono text-stone-300 block pt-1">+34 680 19 84 67</span>
+        </div>
+
+      </div>
+
+      <!-- Otros Canales -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-center text-xs">
+        <div class="p-3.5 rounded-xl bg-stone-800/50 border border-stone-700">
+          <span class="text-stone-400 block mb-0.5">Correo Electrónico</span>
+          <a href="mailto:dragunadianaelena@gmail.com" class="font-bold text-white hover:text-amber-400 underline">dragunadianaelena@gmail.com</a>
+        </div>
+        <div class="p-3.5 rounded-xl bg-stone-800/50 border border-stone-700">
+          <span class="text-stone-400 block mb-0.5">Perfil de LinkedIn</span>
+          <a href="https://www.linkedin.com/in/dianaelenadraguna" target="_blank" rel="noopener noreferrer" class="font-bold text-white hover:text-amber-400 underline">linkedin.com/in/dianaelenadraguna</a>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-2">
+        <span>© 2026 Diana Elena Draguna · Todos los derechos reservados.</span>
+        <a href="cv%20antigravity%20.pdf" download="CV_Diana_Elena_Draguna.pdf" class="hover:text-stone-300 underline">Descargar CV Oficial en PDF</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CHATBOT FLOTANTE INTERACTIVO ("ASISTENTE DE DIANA")
+       ========================================================================== -->
+      <button id="chatbot-toggle-btn" aria-label="Abrir asistente de Diana">
+    <div class="w-6 h-6 rounded-full overflow-hidden border border-amber-500/50 flex-shrink-0">
+      <img src="images/foto_cv.jpg" alt="Avatar Diana" class="w-full h-full object-cover">
+    </div>
+    <span class="text-xs font-bold">Habla conmigo (Diana)</span>
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+  </button>
+
+  <!-- Ventana Flotante del Chatbot -->
+  <div id="chatbot-window">
+    
+    <!-- Cabecera del Chatbot -->
+    <div class="p-3.5 bg-stone-900 text-white flex items-center justify-between border-b border-stone-800">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-amber-500/60 flex-shrink-0">
+          <img src="images/foto_cv.jpg" alt="Diana Elena Draguna" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold leading-tight">Diana Elena Draguna</h4>
+          <span class="text-[10px] text-emerald-400 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online · Respondo en 1ª persona
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <!-- Botón Configuración Gemini API Key -->
+        <button id="chatbot-api-settings-btn" type="button" class="p-1 rounded-lg text-stone-300 hover:text-amber-400 hover:bg-stone-800 transition-colors flex items-center gap-1 text-[11px]" title="Configurar Gemini API Key">
+          <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span id="gemini-status-pill" class="text-[10px] px-1.5 py-0.5 rounded bg-stone-800 border border-stone-700 text-stone-300">Modo Local</span>
+        </button>
+        <button id="chatbot-close-btn" class="p-1 rounded-lg text-stone-400 hover:text-white hover:bg-stone-800 transition-colors" title="Cerrar chat">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel Desplegable para Configurar Gemini API Key -->
+    <div id="gemini-settings-panel" class="hidden border-b border-stone-200 dark:border-stone-800 bg-amber-50/95 dark:bg-stone-900/95 p-3.5 space-y-3 text-xs backdrop-blur-md">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1.5 font-bold text-stone-900 dark:text-stone-100">
+          <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Configuración Google Gemini API</span>
+        </div>
+        <button id="close-gemini-settings-btn" type="button" class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 p-0.5" title="Cerrar panel">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <p class="text-[11px] text-stone-600 dark:text-stone-400 leading-relaxed">
+        Introduce tu propia <strong>Gemini API Key</strong> para que te responda en primera persona mediante el modelo oficial de IA de Google en tiempo real. Se guarda <strong>exclusivamente en tu navegador (localStorage)</strong>.
+      </p>
+
+      <div class="space-y-1">
+        <label for="gemini-key-input" class="block text-[11px] font-semibold text-stone-700 dark:text-stone-300">
+          Tu Gemini API Key:
+        </label>
+        <div class="relative flex items-center">
+          <input type="password" id="gemini-key-input" placeholder="Pega aquí tu clave: AIzaSy..." class="w-full bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 rounded-lg px-2.5 py-1.5 pr-8 text-xs font-mono text-stone-900 dark:text-white focus:outline-none focus:border-amber-600">
+          <button type="button" id="toggle-key-visibility-btn" class="absolute right-2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-200" title="Ver / ocultar clave">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <label for="gemini-model-select" class="text-[11px] font-semibold text-stone-700 dark:text-stone-300 whitespace-nowrap">Modelo:</label>
+        <select id="gemini-model-select" class="w-full bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-700 rounded-lg px-2 py-1 text-xs text-stone-800 dark:text-stone-200">
+          <option value="gemini-1.5-flash">gemini-1.5-flash (Rápido y recomendado)</option>
+          <option value="gemini-2.0-flash">gemini-2.0-flash (Última generación)</option>
+          <option value="gemini-1.5-pro">gemini-1.5-pro (Razonamiento complejo)</option>
+        </select>
+      </div>
+
+      <div id="gemini-key-status" class="text-[11px] text-stone-500 font-mono">
+        ⚪ Modo perfil local activo (sin clave configurada)
+      </div>
+
+      <div class="flex items-center gap-2 pt-1">
+        <button type="button" id="save-gemini-key-btn" class="flex-1 py-1.5 px-3 rounded-lg bg-amber-700 hover:bg-amber-600 text-white font-semibold text-xs shadow-sm transition-colors text-center cursor-pointer">
+          Guardar Clave
+        </button>
+        <button type="button" id="delete-gemini-key-btn" class="py-1.5 px-2.5 rounded-lg bg-stone-200 dark:bg-stone-800 hover:bg-red-100 hover:text-red-700 dark:hover:bg-red-950/60 dark:hover:text-red-300 text-stone-700 dark:text-stone-300 font-semibold text-xs transition-colors cursor-pointer">
+          Eliminar
+        </button>
+      </div>
+
+      <div class="text-[10px] text-stone-500 dark:text-stone-400 pt-1 border-t border-stone-200/60 dark:border-stone-800 flex items-center justify-between">
+        <span>🔒 Guardada en tu localStorage</span>
+        <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-400 underline font-medium hover:text-amber-600">Obtener clave gratis ↗</a>
+      </div>
+    </div>
+
+    <!-- Mensajes -->
+    <div id="chat-messages" class="flex-1 p-3.5 overflow-y-auto space-y-3">
+      <!-- Saludo inicial del bot -->
+      <div class="chat-bubble chat-bubble-bot animate-fadeIn">
+        ¡Hola! 👋 Soy el <strong>asistente virtual de Diana Elena Draguna</strong>.<br><br>
+        Puedo responder con exactitud a preguntas sobre su <strong>formación en ADE & Data Science</strong>, su <strong>TFG sobre Amazon</strong>, su experiencia en <strong>Carrefour, Campofrío y El Corte Inglés</strong>, su intercambio en <strong>KEDGE Bordeaux</strong> o sus certificaciones.<br><br>
+        ¿Qué te gustaría consultar?
+      </div>
+    </div>
+
+    <!-- Chips de Preguntas Frecuentes Rápidas -->
+    <div class="px-3 py-2 bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 flex items-center gap-1.5 overflow-x-auto text-[11px] no-scrollbar">
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Qué has estudiado?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Cuál es tu experiencia?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Qué hiciste en Carrefour?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Tu rol en Campofrío?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Qué hiciste en El Corte Inglés?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿De qué trata tu TFG?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Qué herramientas dominas?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Qué es lo más difícil que has hecho?
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        Tus vídeos demostrativos
+      </button>
+      <button class="chat-chip px-2.5 py-1 rounded-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 whitespace-nowrap text-stone-700 dark:text-stone-300 hover:border-amber-600 transition-colors">
+        ¿Por qué contratarte?
+      </button>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-form" class="p-2.5 border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 flex items-center gap-2">
+      <input type="text" id="chat-input" placeholder="Haz una pregunta a Diana..." class="flex-1 bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-xl px-3 py-2 text-xs text-stone-800 dark:text-stone-100 focus:outline-none focus:border-amber-600">
+      <button type="submit" class="p-2 rounded-xl bg-amber-700 hover:bg-amber-600 text-white flex-shrink-0 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </form>
+
+  </div>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX PARA AMPLIAR FOTOS EN ALTA DEFINICIÓN
+       ========================================================================== -->
+  <div id="image-zoom-modal" class="modal-backdrop lightbox-backdrop-target" role="dialog" aria-modal="true" aria-label="Fotografía ampliada">
+    <div class="relative max-w-4xl max-h-[92vh] p-3 sm:p-5 flex flex-col items-center justify-center">
+      
+      <!-- Botón de Cerrar Imagen -->
+      <button id="image-zoom-close-btn" aria-label="Cerrar imagen ampliada" class="absolute -top-3 -right-3 sm:top-2 sm:right-2 z-30 p-2.5 rounded-full bg-stone-900/90 text-white hover:bg-amber-700 transition-colors shadow-2xl border border-stone-700 cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Contenedor de la Imagen Ampliada -->
+      <div class="rounded-2xl overflow-hidden bg-black/75 shadow-2xl border border-stone-700/80 max-h-[80vh] flex items-center justify-center p-1">
+        <img id="zoomed-image" src="" alt="Fotografía ampliada" class="max-h-[78vh] max-w-[90vw] object-contain rounded-xl">
+      </div>
+
+      <!-- Leyenda Dinámica -->
+      <p id="zoomed-image-caption" class="text-center text-xs sm:text-sm text-stone-200 mt-3 font-medium bg-stone-950/85 px-4 py-2 rounded-full border border-stone-800 shadow-lg backdrop-blur-md max-w-lg"></p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DINÁMICO / LIGHTBOX PARA TFG, VÍDEO Y CERTIFICACIONES
+       ========================================================================== -->
+  <div id="evidence-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog flex flex-col max-h-[90vh]">
+      
+      <!-- Cabecera del Modal -->
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-start justify-between bg-stone-50 dark:bg-stone-900">
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <span id="modal-tag" class="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">DOCUMENTO</span>
+            <span id="modal-badge" class="px-2 py-0.5 rounded-full bg-stone-200 dark:bg-stone-800 text-[10px] font-semibold text-stone-700 dark:text-stone-300">Detalle</span>
+          </div>
+          <h3 id="modal-title" class="text-lg font-bold text-stone-900 dark:text-white">Título de Documento</h3>
+          <p id="modal-subtitle" class="text-xs text-stone-500 dark:text-stone-400">Subtítulo de contexto</p>
+        </div>
+
+        <button id="modal-close-btn" aria-label="Cerrar modal" class="p-1.5 rounded-xl text-stone-400 hover:text-stone-700 dark:hover:text-white hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Cuerpo del Modal -->
+      <div id="modal-body" class="p-5 overflow-y-auto space-y-4">
+        <!-- Inyectado por js/main.js -->
+      </div>
+
+      <!-- Pie del Modal -->
+      <div class="p-3 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-xs text-stone-500 bg-stone-50 dark:bg-stone-900">
+        <span>Portfolio de Diana Elena Draguna</span>
+        <button onclick="document.getElementById('modal-close-btn').click()" class="px-3 py-1 rounded-lg bg-stone-200 dark:bg-stone-800 text-stone-800 dark:text-stone-200 font-semibold hover:bg-stone-300 dark:hover:bg-stone-700 transition-colors">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+
+/* ==========================================================================
+   DIANA ELENA DRAGUNA — PORTFOLIO PROFESIONAL
+   Lógica JavaScript: Tema, Navegación, Lightbox, Carruseles, Vídeos,
+   Modales, Gemini API Key Manager y Chatbot en 1ª Persona (Dual Mode)
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initNavigation();
+  initImageZoomLightbox();
+  initKedgeCarousel();
+  initImmersionCarousel();
+  initVideoPlayer();
+  initGeminiApiKeyManager();
+  initChatbot();
+  initClipboardButtons();
+  initModalSystem();
+});
+
+/* ==========================================================================
+   1. GESTIÓN DE TEMA (CLARO / OSCURO)
+   ========================================================================== */
+function initTheme() {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  if (!themeToggleBtn) return;
+
+  const savedTheme = localStorage.getItem('diana_portfolio_theme');
+  const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    document.documentElement.classList.add('dark');
+    updateThemeIcons(true);
+  } else {
+    document.documentElement.classList.remove('dark');
+    updateThemeIcons(false);
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('diana_portfolio_theme', isDark ? 'dark' : 'light');
+    updateThemeIcons(isDark);
+  });
+}
+
+function updateThemeIcons(isDark) {
+  const moonIcon = document.getElementById('theme-toggle-moon');
+  const sunIcon = document.getElementById('theme-toggle-sun');
+  if (moonIcon && sunIcon) {
+    if (isDark) {
+      moonIcon.classList.add('hidden');
+      sunIcon.classList.remove('hidden');
+    } else {
+      moonIcon.classList.remove('hidden');
+      sunIcon.classList.add('hidden');
+    }
+  }
+}
+
+/* ==========================================================================
+   2. NAVEGACIÓN Y MENÚ MÓVIL
+   ========================================================================== */
+function initNavigation() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   3. LIGHTBOX PARA FOTOS AMPLIABLES EN ALTA DEFINICIÓN
+   ========================================================================== */
+function initImageZoomLightbox() {
+  const zoomModal = document.getElementById('image-zoom-modal');
+  const zoomImg = document.getElementById('image-zoom-img');
+  const zoomCaption = document.getElementById('image-zoom-caption');
+  const zoomCloseBtn = document.getElementById('image-zoom-close-btn');
+
+  if (!zoomModal || !zoomImg) return;
+
+  function openZoomModal(src, altText, captionText) {
+    zoomImg.src = src;
+    zoomImg.alt = altText || 'Fotografía ampliada';
+    if (zoomCaption) zoomCaption.textContent = captionText || altText || '';
+    zoomModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeZoomModal() {
+    zoomModal.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => { zoomImg.src = ''; }, 250);
+  }
+
+  document.querySelectorAll('.zoomable-photo').forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const highRes = img.getAttribute('data-highres') || img.src;
+      const caption = img.getAttribute('data-caption') || img.alt || '';
+      openZoomModal(highRes, img.alt, caption);
+    });
+  });
+
+  if (zoomCloseBtn) zoomCloseBtn.addEventListener('click', closeZoomModal);
+
+  zoomModal.addEventListener('click', (e) => {
+    if (e.target === zoomModal || e.target.classList.contains('lightbox-backdrop-target')) {
+      closeZoomModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && zoomModal.classList.contains('active')) {
+      closeZoomModal();
+    }
+  });
+}
+
+/* ==========================================================================
+   4. CARRUSEL KEDGE BUSINESS SCHOOL
+   ========================================================================== */
+function initKedgeCarousel() {
+  const slides = document.querySelectorAll('.kedge-slide');
+  const prevBtn = document.getElementById('kedge-prev-btn');
+  const nextBtn = document.getElementById('kedge-next-btn');
+  const counter = document.getElementById('kedge-counter');
+
+  if (!slides.length) return;
+  let currentIndex = 0;
+
+  function renderSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.style.display = 'block';
+      } else {
+        slide.classList.remove('active');
+        slide.style.display = 'none';
+      }
+    });
+    if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      renderSlide(currentIndex);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % slides.length;
+      renderSlide(currentIndex);
+    });
+  }
+
+  renderSlide(0);
+}
+
+/* ==========================================================================
+   5. CARRUSEL INMERSIÓN EN IRLANDA (BRAY & DUBLÍN)
+   ========================================================================== */
+function initImmersionCarousel() {
+  const slides = document.querySelectorAll('.immersion-slide');
+  const prevBtn = document.getElementById('immersion-prev-btn');
+  const nextBtn = document.getElementById('immersion-next-btn');
+  const counter = document.getElementById('immersion-counter');
+
+  if (!slides.length) return;
+  let currentIndex = 0;
+
+  function renderSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.style.display = 'block';
+      } else {
+        slide.classList.remove('active');
+        slide.style.display = 'none';
+      }
+    });
+    if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      renderSlide(currentIndex);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % slides.length;
+      renderSlide(currentIndex);
+    });
+  }
+
+  renderSlide(0);
+}
+
+/* ==========================================================================
+   6. REPRODUCTORES DE VÍDEO (ELEVATOR PITCH, PROYECTO & HABILIDADES)
+   ========================================================================== */
+function initVideoPlayer() {
+  const containers = document.querySelectorAll('.video-container-custom');
+  if (!containers.length) return;
+
+  const allVideos = document.querySelectorAll('.video-container-custom video');
+
+  containers.forEach(container => {
+    const videoElem = container.querySelector('video');
+    const overlayBtn = container.querySelector('.video-play-overlay-btn');
+
+    if (!videoElem) return;
+
+    if (overlayBtn) {
+      overlayBtn.addEventListener('click', () => {
+        if (videoElem.paused) {
+          // Pausar cualquier otro vídeo activo para evitar reproducciones simultáneas
+          allVideos.forEach(v => {
+            if (v !== videoElem && !v.paused) v.pause();
+          });
+          videoElem.play();
+          overlayBtn.classList.add('opacity-0', 'pointer-events-none');
+        } else {
+          videoElem.pause();
+          overlayBtn.classList.remove('opacity-0', 'pointer-events-none');
+        }
+      });
+    }
+
+    videoElem.addEventListener('play', () => {
+      allVideos.forEach(v => {
+        if (v !== videoElem && !v.paused) v.pause();
+      });
+      if (overlayBtn) overlayBtn.classList.add('opacity-0', 'pointer-events-none');
+    });
+
+    videoElem.addEventListener('pause', () => {
+      if (overlayBtn) overlayBtn.classList.remove('opacity-0', 'pointer-events-none');
+    });
+
+    videoElem.addEventListener('ended', () => {
+      if (overlayBtn) overlayBtn.classList.remove('opacity-0', 'pointer-events-none');
+    });
+  });
+}
+
+/* ==========================================================================
+   7. GESTOR DE GEMINI API KEY EN LOCALSTORAGE
+   (Guardar, modificar, eliminar, probar y sincronizar estado UI)
+   ========================================================================== */
+const GEMINI_CONFIG = {
+  STORAGE_KEY: 'diana_gemini_api_key',
+  MODEL_KEY: 'diana_gemini_model',
+  DEFAULT_MODEL: 'gemini-1.5-flash'
+};
+
+function getStoredGeminiKey() {
+  try {
+    return localStorage.getItem(GEMINI_CONFIG.STORAGE_KEY) || '';
+  } catch (e) {
+    return '';
+  }
+}
+
+function getStoredGeminiModel() {
+  try {
+    return localStorage.getItem(GEMINI_CONFIG.MODEL_KEY) || GEMINI_CONFIG.DEFAULT_MODEL;
+  } catch (e) {
+    return GEMINI_CONFIG.DEFAULT_MODEL;
+  }
+}
+
+function saveGeminiKey(key, model) {
+  try {
+    if (key) {
+      localStorage.setItem(GEMINI_CONFIG.STORAGE_KEY, key.trim());
+    } else {
+      localStorage.removeItem(GEMINI_CONFIG.STORAGE_KEY);
+    }
+    if (model) {
+      localStorage.setItem(GEMINI_CONFIG.MODEL_KEY, model.trim());
+    }
+    updateGeminiUIState();
+    return true;
+  } catch (e) {
+    console.error('Error al guardar en localStorage:', e);
+    return false;
+  }
+}
+
+function removeGeminiKey() {
+  try {
+    localStorage.removeItem(GEMINI_CONFIG.STORAGE_KEY);
+    updateGeminiUIState();
+    return true;
+  } catch (e) {
+    console.error('Error al eliminar de localStorage:', e);
+    return false;
+  }
+}
+
+function updateGeminiUIState() {
+  const currentKey = getStoredGeminiKey();
+  const currentModel = getStoredGeminiModel();
+  const statusPill = document.getElementById('gemini-status-pill');
+  const keyInput = document.getElementById('gemini-key-input');
+  const modelSelect = document.getElementById('gemini-model-select');
+  const statusLabel = document.getElementById('gemini-key-status');
+
+  if (modelSelect) {
+    modelSelect.value = currentModel;
+  }
+
+  if (currentKey) {
+    const masked = currentKey.length > 8 
+      ? currentKey.slice(0, 6) + '...' + currentKey.slice(-4)
+      : '••••••••';
+
+    if (statusPill) {
+      statusPill.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block mr-1"></span>Gemini IA';
+      statusPill.className = 'text-[10px] px-2 py-0.5 rounded-full gemini-pill-active font-semibold';
+      statusPill.title = `Conectado a Google Gemini (${currentModel})`;
+    }
+
+    if (statusLabel) {
+      statusLabel.innerHTML = `🟢 Clave activa: <span class="font-mono text-emerald-600 dark:text-emerald-400">${masked}</span> (${currentModel})`;
+    }
+
+    if (keyInput && !keyInput.matches(':focus')) {
+      keyInput.value = currentKey;
+    }
+  } else {
+    if (statusPill) {
+      statusPill.innerHTML = '<svg class="w-3 h-3 text-amber-500 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Modo Local';
+      statusPill.className = 'text-[10px] px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 border border-stone-200 dark:border-stone-700 font-medium';
+      statusPill.title = 'Modo Perfil Local (introduce tu Gemini API Key para IA generativa)';
+    }
+
+    if (statusLabel) {
+      statusLabel.innerHTML = '⚪ Modo perfil local activo (sin Gemini API Key)';
+    }
+
+    if (keyInput && !keyInput.matches(':focus')) {
+      keyInput.value = '';
+    }
+  }
+}
+
+function initGeminiApiKeyManager() {
+  const settingsBtn = document.getElementById('chatbot-api-settings-btn');
+  const panel = document.getElementById('gemini-settings-panel');
+  const closeBtn = document.getElementById('close-gemini-settings-btn');
+  const saveBtn = document.getElementById('save-gemini-key-btn');
+  const deleteBtn = document.getElementById('delete-gemini-key-btn');
+  const keyInput = document.getElementById('gemini-key-input');
+  const modelSelect = document.getElementById('gemini-model-select');
+  const toggleVisibilityBtn = document.getElementById('toggle-key-visibility-btn');
+
+  updateGeminiUIState();
+
+  if (settingsBtn && panel) {
+    settingsBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      panel.classList.toggle('hidden');
+      if (!panel.classList.contains('hidden') && keyInput) {
+        keyInput.focus();
+      }
+    });
+  }
+
+  if (closeBtn && panel) {
+    closeBtn.addEventListener('click', () => {
+      panel.classList.add('hidden');
+    });
+  }
+
+  if (toggleVisibilityBtn && keyInput) {
+    toggleVisibilityBtn.addEventListener('click', () => {
+      const isPass = keyInput.type === 'password';
+      keyInput.type = isPass ? 'text' : 'password';
+    });
+  }
+
+  if (saveBtn && keyInput && modelSelect) {
+    saveBtn.addEventListener('click', () => {
+      const rawKey = keyInput.value.trim();
+      const selectedModel = modelSelect.value;
+
+      if (!rawKey) {
+        showToast('⚠️ Por favor introduce una clave Gemini válida.');
+        return;
+      }
+
+      saveGeminiKey(rawKey, selectedModel);
+      showToast('✓ Clave Gemini API guardada en localStorage');
+      if (panel) panel.classList.add('hidden');
+    });
+  }
+
+  if (deleteBtn && keyInput) {
+    deleteBtn.addEventListener('click', () => {
+      removeGeminiKey();
+      keyInput.value = '';
+      showToast('✓ Clave eliminada. Modo perfil local reactivado');
+      if (panel) panel.classList.add('hidden');
+    });
+  }
+}
+
+/* ==========================================================================
+   8. CHATBOT EN 1ª PERSONA (DIANA ELENA DRAGUNA)
+   - Dual Mode: Google Gemini REST API (si hay clave en localStorage)
+     o Motor Semántico de Evidencias Reales en 1ª persona (modo local).
+   - Indicador de carga animado.
+   - Manejo completo de errores de API/Red.
+   - Cero invención de datos.
+   ========================================================================== */
+
+const DIANA_SYSTEM_INSTRUCTION = `Eres Diana Elena Draguna. Estás interactuando en tiempo real con un visitante, reclutador o directivo en tu portfolio web personal.
+
+DIRECTRICES CRÍTICAS:
+1. RESPONDE SIEMPRE EN PRIMERA PERSONA DEL SINGULAR ("yo", "mi trayectoria", "he estudiado", "en mi experiencia en Carrefour desarrollé...", "mi Trabajo de Fin de Grado (TFG) trata sobre...", etc.).
+2. BASA TUS RESPUESTAS EXCLUSIVAMENTE EN LA INFORMACIÓN OFICIAL DE TU PERFIL QUE SE DETALLA A CONTINUACIÓN.
+3. NUNCA INVENTES EXPERIENCIAS, TAREAS, EMPRESAS, FECHAS NI CONOCIMIENTOS. Si el visitante te pregunta algo que no forme parte de tu perfil (por ejemplo eventos personales fuera del ámbito profesional, hobbies no documentados o herramientas que no domines), responde con total sinceridad y cortesía profesional indicando que ese detalle no está registrado en tu trayectoria pública documentada y sugiere amablemente ponerse en contacto contigo a través de WhatsApp (+34 680 19 84 67) o email (dragunadianaelena@gmail.com).
+4. MANTÉN UN TONO PROFESIONAL, seguro, estructurado, educado y resolutivo.
+5. FORMATO CLARO: Emplea viñetas, negritas y saltos de párrafo para facilitar la lectura ejecutiva.
+
+DATOS OFICIALES DE TU PERFIL (DIANA ELENA DRAGUNA):
+- Nombre completo: Diana Elena Draguna.
+- Contacto directo:
+  * WhatsApp / Teléfono: +34 680 19 84 67
+  * Email: dragunadianaelena@gmail.com
+  * LinkedIn: https://www.linkedin.com/in/dianaelenadraguna
+  * Ubicación: Madrid, España.
+- Formación académica:
+  * ESIC University (Madrid, 2022 - Actualidad): Doble Grado en Administración y Dirección de Empresas (ADE) y Título Superior en Data Science. Nota media: 7,1 / 10. Asignaturas destacadas: Sistemas de Información de Gestión, Modelación Estadística con R, Visualización de Datos, Patrones de Consumo, Métodos de Decisión Empresarial y Minería de Datos.
+  * KEDGE Business School (Bordeaux, Francia, Feb - May 2025): Intercambio Erasmus en Management completado con nota media sobresaliente de 8,63 / 10. Cursos en inglés: Responsible Management & CSR, Luxury Marketing, Cross-Cultural Management, CSR & International Development.
+  * Inmersión Lingüística en Bray & Dublín (Irlanda): Estancia intensiva de un mes con Interway en entorno 100% nativo anglófono.
+  * Trabajo de Fin de Grado (TFG): "Impacto del Liderazgo en Amazon: Cultura, Innovación y Gestión del Talento". Autoras: Diana Elena Draguna y María José Gutiérrez | Tutor: Luciano López Gómez. Metodología mixta con 170 encuestas cuantitativas (escala Likert de 5 puntos) y entrevistas a empleados, examinando la filosofía "Day 1" y la obsesión por el cliente de Jeff Bezos. Autorizada publicación en Biblioteca ESIC.
+- Experiencia laboral:
+  * Centros Comerciales Carrefour (Beca Captación FF&SS, 2026): Por iniciativa propia automaticé 6 procesos de reporting comercial mediante scripts en Python (Spyder con Pandas), reduciendo en un 85% el tiempo de procesamiento manual del equipo y asegurando la total fiabilidad del dato. Seguimiento de altas de clientes, volumen financiado y campañas de la tarjeta Carrefour PASS. Elaboración de guías y presentaciones formativas para gestores en hipermercados.
+  * Campofrío Food Group (Beca Controlling Comercial, 2025 - 2026): Controlling diario de márgenes brutos y netos por cliente y canal (Retail, Foodservice y Exportación). Creación y mantenimiento de cuadros de mando integrando SAP ERP, IBIS Sales Intelligence y Excel avanzado. Auditoría de contratos, liquidación y cálculo de rappels por volumen comercial. Soporte activo en cierres contables mensuales.
+  * Centros El Corte Inglés (Beca Analista de Negocios): Enlace funcional entre Negocio y TI. Mapeo de flujos de trabajo As-Is / To-Be y documentación de requerimientos funcionales. Diseño, ejecución y validación de pruebas de aceptación de usuario (UAT). Modelos predictivos de demanda (forecasting) y evaluación de retorno de promociones.
+- Habilidades analíticas y herramientas:
+  * Programación y analítica: Python (Pandas, NumPy, scripts ETL en Spyder), R (econometría, estadística multivariante).
+  * Business Intelligence & Reporting: Microsoft Power BI (modelado relacional en DAX y Power Query), Google Analytics 4 (GA4).
+  * Sistemas ERP & Gestión: SAP ERP (módulos comercial y facturación), IBIS Sales Intelligence.
+  * Modelado Financiero: Microsoft Excel Avanzado (tablas dinámicas, fórmulas analíticas, modelos de márgenes).
+  * Cloud & Inteligencia Artificial: Microsoft Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900).
+  * Metodología de procesos: Diagramación As-Is / To-Be, especificaciones funcionales, planes de prueba UAT.
+- 5 Certificaciones técnicas oficiales:
+  1. Microsoft Azure Fundamentals (AZ-900, 2026)
+  2. Microsoft Azure AI Fundamentals (AI-900, 2026)
+  3. Google Analytics Certificate (GA4, 2025)
+  4. Power BI Dashboard Creation (ESIC University, 2024)
+  5. Microsoft Excel Associate (2023)
+- Perfil lingüístico trilingüe:
+  * Castellano (Nativo)
+  * Rumano (Nativo - perfil bilingüe natural)
+  * Inglés (Nivel C1 / intermedio-avanzado profesional)
+- Liderazgo deportivo y valores:
+  * Baloncesto: Capitana del equipo escolar en La Salle Sagrado Corazón (capitanía, liderazgo motivacional, toma de decisiones rápidas bajo presión y cohesión grupal).
+  * Natación y tenis de competición: Ciudad de la Raqueta y torneos escolares (disciplina, perseverancia y alta tolerancia al esfuerzo).
+  * Voluntariado social: Comunidad de Sant'Egidio (reparto de alimentos a personas sin hogar y comedores sociales) y Residencia Amavir Pozuelo (acompañamiento a personas mayores con MásESIC).
+- Vídeos demostrativos en el portfolio web:
+  1. Elevator Pitch en la cabecera: mi presentación ejecutiva de visión analítica y de negocio.
+  2. Proyecto Destacado Carrefour PASS: demostración en sala directiva del cuadro de mando interactivo y automatización Python (-85% tiempo).
+  3. Habilidades Técnicas: interacción con dashboards avanzados, IA y entornos Cloud.`;
+
+function initChatbot() {
+  const toggleBtn = document.getElementById('chatbot-toggle-btn');
+  const chatWindow = document.getElementById('chatbot-window');
+  const closeBtn = document.getElementById('chatbot-close-btn');
+  const messagesContainer = document.getElementById('chat-messages');
+  const inputForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+
+  if (!toggleBtn || !chatWindow) return;
+
+  const chatHistory = [];
+  let isAwaitingResponse = false;
+
+  toggleBtn.addEventListener('click', () => {
+    chatWindow.classList.toggle('open');
+    if (chatWindow.classList.contains('open') && chatInput) {
+      chatInput.focus();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      chatWindow.classList.remove('open');
+    });
+  }
+
+  // Chips superiores
+  document.querySelectorAll('.chat-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const query = chip.getAttribute('data-query') || chip.textContent.trim();
+      handleUserMessage(query);
+    });
+  });
+
+  // Chips dentro de mensajes
+  if (messagesContainer) {
+    messagesContainer.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chat-chip-inline');
+      if (chip) {
+        const query = chip.getAttribute('data-query') || chip.textContent.trim();
+        handleUserMessage(query);
+      }
+    });
+  }
+
+  if (inputForm && chatInput) {
+    inputForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = chatInput.value.trim();
+      if (!text || isAwaitingResponse) return;
+      chatInput.value = '';
+      handleUserMessage(text);
+    });
+  }
+
+  async function handleUserMessage(query) {
+    if (!query || isAwaitingResponse) return;
+    isAwaitingResponse = true;
+
+    appendMessage(escapeHtml(query), 'user');
+    const typingId = appendTypingIndicator();
+
+    const apiKey = getStoredGeminiKey();
+    const model = getStoredGeminiModel();
+
+    if (apiKey) {
+      // Modo Gemini REST API
+      try {
+        const answer = await callGeminiApi(query, apiKey, model, chatHistory);
+        removeTypingIndicator(typingId);
+        
+        chatHistory.push({ role: 'user', parts: [{ text: query }] });
+        chatHistory.push({ role: 'model', parts: [{ text: answer }] });
+        if (chatHistory.length > 8) chatHistory.splice(0, chatHistory.length - 8);
+
+        appendMessage(formatMarkdown(answer), 'bot');
+      } catch (err) {
+        removeTypingIndicator(typingId);
+        appendErrorMessage(err.message || 'Error de conexión con Gemini API', query);
+      } finally {
+        isAwaitingResponse = false;
+      }
+    } else {
+      // Modo Local Perfil Diana (en 1ª persona)
+      setTimeout(() => {
+        removeTypingIndicator(typingId);
+        const answer = generateFirstPersonSolutionResponse(query);
+        appendMessage(answer, 'bot');
+        isAwaitingResponse = false;
+      }, 350);
+    }
+  }
+
+  async function callGeminiApi(userMessage, apiKey, model, history) {
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+
+    const contents = [];
+    if (Array.isArray(history)) {
+      history.slice(-6).forEach(item => contents.push(item));
+    }
+    contents.push({
+      role: 'user',
+      parts: [{ text: userMessage }]
+    });
+
+    const payload = {
+      contents: contents,
+      systemInstruction: {
+        parts: [{ text: DIANA_SYSTEM_INSTRUCTION }]
+      },
+      generationConfig: {
+        temperature: 0.25,
+        maxOutputTokens: 950
+      }
+    };
+
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      let errorMsg = `HTTP ${response.status}: ${response.statusText}`;
+      try {
+        const errorJson = await response.json();
+        if (errorJson.error && errorJson.error.message) {
+          errorMsg = errorJson.error.message;
+        }
+      } catch (e) {}
+      throw new Error(errorMsg);
+    }
+
+    const data = await response.json();
+    const textResult = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!textResult) {
+      throw new Error('La API de Gemini devolvió una respuesta vacía o no estructurada.');
+    }
+
+    return textResult;
+  }
+
+  function appendMessage(text, sender) {
+    const bubble = document.createElement('div');
+    bubble.className = `chat-bubble ${sender === 'user' ? 'chat-bubble-user' : 'chat-bubble-bot'} animate-fadeIn`;
+    bubble.innerHTML = text;
+    messagesContainer.appendChild(bubble);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function appendErrorMessage(errorMsg, originalQuery) {
+    const bubble = document.createElement('div');
+    bubble.className = 'chat-bubble chat-bubble-error animate-fadeIn space-y-2';
+    bubble.innerHTML = `
+      <div class="flex items-center gap-1.5 font-bold">
+        <svg class="w-4 h-4 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <span>Error de conexión con Google Gemini</span>
+      </div>
+      <p class="text-[11px] leading-relaxed">${escapeHtml(errorMsg)}</p>
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        <button class="chat-chip-inline px-2.5 py-1 rounded bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 font-semibold text-[11px]" onclick="document.getElementById('chatbot-api-settings-btn').click()">⚙️ Revisar o Cambiar API Key</button>
+        <button class="chat-chip-inline px-2.5 py-1 rounded bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 font-semibold text-[11px]" data-query="${escapeAttr(originalQuery)}">🔄 Responder en Modo Perfil Local</button>
+      </div>
+    `;
+    messagesContainer.appendChild(bubble);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function appendTypingIndicator() {
+    const id = 'typing-' + Date.now();
+    const indicator = document.createElement('div');
+    indicator.id = id;
+    indicator.className = 'chat-bubble chat-bubble-bot flex items-center gap-1.5 py-2.5';
+    indicator.innerHTML = `
+      <span class="w-1.5 h-1.5 rounded-full bg-stone-500 animate-bounce"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-stone-500 animate-bounce [animation-delay:0.2s]"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-stone-500 animate-bounce [animation-delay:0.4s]"></span>
+    `;
+    messagesContainer.appendChild(indicator);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    return id;
+  }
+
+  function removeTypingIndicator(id) {
+    const el = document.getElementById(id);
+    if (el) el.remove();
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function escapeAttr(text) {
+    return (text || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function formatMarkdown(text) {
+    if (!text) return '';
+    let html = escapeHtml(text);
+
+    // Negrita
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // Cursiva
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    html = html.replace(/_(.*?)_/g, '<em>$1</em>');
+
+    // Enlaces
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-400 underline font-semibold hover:text-amber-600">$1</a>');
+
+    // Listas con viñetas
+    const lines = html.split('\n');
+    const formatted = [];
+    let inList = false;
+
+    for (let line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('* ') || trimmed.startsWith('- ') || trimmed.startsWith('• ')) {
+        if (!inList) {
+          formatted.push('<ul class="space-y-1 my-1.5 list-disc list-inside">');
+          inList = true;
+        }
+        formatted.push(`<li>${trimmed.replace(/^(\*|-|•)\s*/, '')}</li>`);
+      } else {
+        if (inList) {
+          formatted.push('</ul>');
+          inList = false;
+        }
+        formatted.push(line);
+      }
+    }
+    if (inList) formatted.push('</ul>');
+
+    html = formatted.join('\n');
+    html = html.replace(/\n\n+/g, '<br><br>');
+    html = html.replace(/\n/g, '<br>');
+
+    return html;
+  }
+
+  function normalizeText(text) {
+    return text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  // Diccionario Semántico en 1ª Persona (Diana Elena Draguna)
+  const intentKnowledge = {
+    retos_dificil: {
+      phrases: [
+        'mas dificil', 'mayor reto', 'mayores retos', 'mayor desafio', 'mayores desafios',
+        'situacion compleja', 'situaciones complejas', 'obstaculo', 'obstaculos', 'problema complejo',
+        'problemas complejos', 'como resuelves', 'resolucion de problemas', 'bajo presion',
+        'situacion dificil', 'lo mas complicado', 'que fue lo mas dificil', 'peor momento',
+        'que ha sido lo mas dificil', 'que es lo mas dificil que has hecho'
+      ],
+      tokens: [
+        'reto', 'retos', 'desafio', 'desafios', 'fracaso', 'fracasos', 'error', 'errores',
+        'dificultad', 'dificultades', 'dificil', 'dificiles', 'complicado', 'debilidad', 'debilidades'
+      ],
+      response: `<strong>Mis Soluciones ante los Mayores Desafíos Profesionales:</strong><br><br>
+      Abordo los problemas complejos uniendo mi visión de ADE con el rigor cuantitativo de Data Science: <strong>diagnóstico de la ineficiencia, modelado y ejecución rápida de soluciones</strong>:<br><br>
+      1. <strong>Automatización en Carrefour (Mi mayor reto técnico & de eficiencia):</strong><br>
+      • <em>El problema:</em> El equipo perdía horas diarias volcando datos de Carrefour PASS en hojas de cálculo dispersas, con elevado riesgo de error humano.<br>
+      • <em>Mi solución:</em> Asumí por propia iniciativa la programación en <strong>Python (Spyder con Pandas)</strong> de 6 pipelines automatizados. Reduje el tiempo manual en un <strong>85%</strong> y aseguré la fiabilidad del dato.<br><br>
+      2. <strong>Cierres Contables y Auditoría de Rappels en Campofrío (Rigor financiero):</strong><br>
+      • <em>El problema:</em> Conciliar grandes volúmenes de facturación y calcular liquidaciones de rappels por volumen contractual bajo la presión de plazos de cierre mensual.<br>
+      • <em>Mi solución:</em> Construí y exploté cuadros de mando integrando <strong>SAP ERP, IBIS y Excel avanzado</strong>, logrando cierres rigurosos sin desvíos contables.<br><br>
+      3. <strong>Alineamiento Negocio - TI en El Corte Inglés (Coordinación de procesos):</strong><br>
+      • <em>El problema:</em> Brecha de prioridades entre metas comerciales y desarrollos técnicos de software.<br>
+      • <em>Mi solución:</em> Documenté requerimientos funcionales, levanté diagramas de flujo <strong>As-Is / To-Be</strong> y ejecuté planes de prueba <strong>UAT</strong>, validando que el software cumpliese con la operativa real.<br><br>
+      4. <strong>Compromiso y Resiliencia Multidisciplinar:</strong><br>
+      • <em>El reto:</em> Compatibilizar un riguroso Doble Grado en ADE + Data Science con un intercambio Erasmus superado con <strong>8,63 / 10</strong> y la capitanía en baloncesto.<br>
+      • <em>Mi respuesta:</em> Disciplina horaria, tolerancia a la presión y liderazgo basado en la confianza de equipo.<br><br>
+      <span class="text-xs text-stone-500">Si deseas profundizar en algún reto que no figure en este resumen público, no dudes en escribirme directamente al +34 680 19 84 67 o a mi email.</span>`
+    },
+
+    experiencia_general: {
+      phrases: [
+        'donde has trabajado', 'donde ha trabajado', 'donde trabajo', 'donde trabajaste',
+        'donde trabajas', 'carrera profesional', 'experiencia laboral', 'historial laboral',
+        'resumen experiencia', 'que has hecho', 'que ha hecho', 'proyectos laborales',
+        'empresas donde ha trabajado', 'en que ha trabajado', 'vida laboral', 'cual es tu experiencia'
+      ],
+      tokens: [
+        'experiencia', 'experiencias', 'trayectoria', 'empresas', 'practicas', 'empleo',
+        'empleos', 'trabajos', 'trabajo', 'curriculum', 'cv'
+      ],
+      response: `<strong>Mi Trayectoria Laboral y Experiencia Profesional:</strong><br><br>
+      He aportado valor en tres corporaciones de primer nivel conectando el análisis cuantitativo con la gestión empresarial:<br><br>
+      1. <strong>Centros Comerciales Carrefour | Beca Captación FF&SS (2026):</strong><br>
+      • Automaticé de forma proactiva <strong>6 procesos de reporting comercial</strong> mediante <strong>Python (Pandas, Spyder)</strong>, logrando un <strong>85% de ahorro de tiempo manual</strong>.<br>
+      • Seguimiento comercial de la tarjeta <strong>Carrefour PASS</strong>, análisis cuantitativo de consumo y materiales formativos para hipermercados.<br><br>
+      2. <strong>Campofrío Food Group | Beca Controlling Área Comercial (2025 - 2026):</strong><br>
+      • Controlling de rentabilidad, márgenes brutos/netos y política de descuentos por cliente y canal.<br>
+      • Cuadros de mando en <strong>SAP ERP, IBIS y Excel</strong>; auditoría de contratos y liquidación de rappels por volumen comercial; y soporte activo en cierres contables mensuales.<br><br>
+      3. <strong>Centros El Corte Inglés | Beca Analista de Negocios:</strong><br>
+      • Enlace funcional entre Negocio y TI, levantamiento de especificaciones y mapeo <strong>As-Is / To-Be</strong>.<br>
+      • Pruebas de aceptación de usuario (<strong>UAT</strong>), modelos predictivos de demanda (forecasting) y evaluación de campañas.<br><br>
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        <button class="chat-chip-inline px-2 py-0.5 rounded-md bg-stone-200 dark:bg-stone-700 text-stone-800 dark:text-stone-200 text-[11px] font-medium hover:bg-amber-600 hover:text-white transition-colors" data-query="que hiciste en carrefour">Ver Carrefour</button>
+        <button class="chat-chip-inline px-2 py-0.5 rounded-md bg-stone-200 dark:bg-stone-700 text-stone-800 dark:text-stone-200 text-[11px] font-medium hover:bg-amber-600 hover:text-white transition-colors" data-query="tu rol en campofrio">Ver Campofrío</button>
+        <button class="chat-chip-inline px-2 py-0.5 rounded-md bg-stone-200 dark:bg-stone-700 text-stone-800 dark:text-stone-200 text-[11px] font-medium hover:bg-amber-600 hover:text-white transition-colors" data-query="que hiciste en el corte ingles">Ver El Corte Inglés</button>
+      </div>`
+    },
+
+    carrefour: {
+      phrases: [
+        'carrefour pass', 'servicios financieros', '6 procesos', 'seis procesos', '85 por ciento',
+        'captacion ffss', 'captacion ff ss', 'reporting carrefour', 'que hiciste en carrefour'
+      ],
+      tokens: [
+        'carrefour', 'python', 'spyder', 'pass', 'ffss', 'captacion',
+        'automatiz', 'automatizacion', 'automatizo', 'automatizar', 'volcado', 'pandas'
+      ],
+      response: `<strong>Mi Experiencia en Centros Comerciales Carrefour (Beca Captación FF&SS):</strong><br><br>
+      • <strong>Iniciativa Propia en Automatización con Python:</strong> Asumí de forma proactiva la automatización de <strong>6 procesos críticos de reporting comercial</strong> que anteriormente se realizaban de forma manual en hojas de cálculo dispersas. Desarrollé scripts en <strong>Python (Spyder con Pandas)</strong>, reduciendo en un <strong>85% el tiempo de procesamiento manual</strong> del equipo y eliminando el riesgo de errores en el volcado de datos.<br>
+      • <strong>Reporting Carrefour PASS:</strong> Consolidé periódicamente altas de clientes, volumen financiado y campañas de la tarjeta Carrefour PASS.<br>
+      • <strong>Análisis de Comportamiento:</strong> Evalué cuantitativamente patrones de compra y desempeño de campañas comerciales para fundamentar decisiones operativas.<br>
+      • <strong>Materiales para Tiendas:</strong> Diseñé guías y presentaciones formativas ejecutivas para gestores en hipermercados.`
+    },
+
+    campofrio: {
+      phrases: [
+        'cierre contable', 'cierres contables', 'auditoria comercial', 'cuadre contable',
+        'controlling campofrio', 'campofrio food group', 'tu rol en campofrio'
+      ],
+      tokens: [
+        'campofrio', 'controlling', 'sap', 'ibis', 'rappel', 'rappels', 'margen', 'margenes',
+        'descuento', 'descuentos', 'rentabilidad', 'foodservice', 'horeca'
+      ],
+      response: `<strong>Mi Experiencia en Campofrío Food Group (Beca Controlling Comercial):</strong><br><br>
+      • <strong>Controlling de Rentabilidad & KPIs:</strong> Monitoricé diariamente indicadores comerciales, márgenes brutos y netos, y políticas de precios y descuentos por cliente y canal (Retail, Foodservice y Exportación).<br>
+      • <strong>Cuadros de Mando en SAP, IBIS y Excel:</strong> Creé y actualicé dashboards de ventas integrando datos del ERP <strong>SAP</strong> con el software <strong>IBIS</strong> y modelos financieros en Excel.<br>
+      • <strong>Auditoría de Acuerdos y Rappels:</strong> Revisé exhaustivamente la facturación de grandes clientes para verificar la correcta aplicación de promociones y calculé liquidaciones de <strong>rappels por volumen</strong> contractual.<br>
+      • <strong>Cierres Contables Mensuales:</strong> Verifiqué pedidos pendientes, facturas emitidas y periodificaciones de ingresos y gastos, garantizando el cuadre exacto de las cuentas.`
+    },
+
+    corte_ingles: {
+      phrases: [
+        'corte ingles', 'el corte ingles', 'analista de negocios', 'analista funcional',
+        'as is', 'to be', 'pruebas uat', 'pronostico demanda', 'flujos de trabajo', 'analisis funcional',
+        'que hiciste en el corte ingles'
+      ],
+      tokens: [
+        'uat', 'forecasting', 'demanda'
+      ],
+      response: `<strong>Mi Experiencia en Centros El Corte Inglés (Beca Analista de Negocios):</strong><br><br>
+      • <strong>Enlace Negocio - TI:</strong> Traduje objetivos comerciales en requerimientos funcionales y técnicos para el equipo de desarrollo de software informático.<br>
+      • <strong>Mapeo de Procesos As-Is / To-Be:</strong> Diagnosticé flujos de trabajo existentes, detecté cuellos de botella y diseñé procedimientos optimizados.<br>
+      • <strong>Pruebas de Aceptación (UAT):</strong> Definí, ejecuté y validé casos de prueba con usuarios clave para verificar que los nuevos módulos informáticos cumpliesen con la operativa real del negocio.<br>
+      • <strong>Forecasting de Ventas:</strong> Construí modelos predictivos de demanda para estimar el volumen de venta y evaluar el retorno económico de promociones.`
+    },
+
+    estudios: {
+      phrases: [
+        'doble grado', 'nota media', 'ciencia de datos', 'ciencias de datos', 'administracion y direccion',
+        'titulo superior', 'estudios universitarios', 'que has estudiado', 'donde estudiaste', 'donde has estudiado'
+      ],
+      tokens: [
+        'estudio', 'estudios', 'estudiado', 'estudiando', 'estudias', 'estudiaste',
+        'universidad', 'carrera', 'grado', 'esic', 'titulacion', 'formacion',
+        'educacion', 'ade', 'asignaturas', 'materias', 'expediente', 'facultad'
+      ],
+      response: `<strong>Mi Formación Universitaria Oficial:</strong><br><br>
+      1. <strong>ESIC University (Madrid, 2022 - Actualidad):</strong><br>
+      • Curso el <strong>Doble Grado en Administración y Dirección de Empresas (ADE) y Título Superior en Data Science</strong> (Nota media: 7,1 / 10).<br>
+      • <em>Asignaturas clave:</em> Sistemas de Información de Gestión, Modelación Estadística con R, Visualización de Datos, Patrones de Consumo, Métodos de Decisión Empresarial y Minería de Datos.<br><br>
+      2. <strong>KEDGE Business School (Bordeaux, Francia, Feb - May 2025):</strong><br>
+      • Completé mi <strong>intercambio Erasmus en Management</strong> con una sobresaliente <strong>nota media de 8,63 / 10</strong>.<br>
+      • Cursos en inglés: <em>Responsible Management & CSR, Luxury Marketing, Cross-Cultural Management, CSR & International Development</em>.<br><br>
+      3. <strong>Trabajo de Fin de Grado (TFG):</strong><br>
+      • <em>"Impacto del Liderazgo en Amazon"</em>, analizando 170 encuestas sobre cultura corporativa, innovación y bienestar laboral.`
+    },
+
+    tfg: {
+      phrases: [
+        'trabajo de fin de grado', 'trabajo fin de grado', 'fin de grado',
+        'liderazgo en amazon', '170 encuestas', 'maria jose', 'luciano lopez', 'day 1',
+        'tfg amazon', 'sobre amazon', 'memoria del tfg', 'de que trata tu tfg'
+      ],
+      tokens: [
+        'tfg', 'amazon', 'tesis', 'encuesta', 'encuestas'
+      ],
+      response: `<strong>Mi Trabajo de Fin de Grado (TFG): "Impacto del Liderazgo en Amazon"</strong><br><br>
+      • <strong>Titulación:</strong> Grado en ADE · ESIC University (Curso Académico 2025/2026).<br>
+      • <strong>Autoras:</strong> Diana Elena Draguna y María José Gutiérrez | <strong>Tutor:</strong> Luciano López Gómez.<br>
+      • <strong>Metodología Mixta:</strong> Combiné una <strong>encuesta cuantitativa a 170 participantes</strong> (escala Likert de 5 puntos) con entrevistas cualitativas a empleados de Amazon.<br>
+      • <strong>Hallazgos Clave:</strong> Analicé cómo la filosofía Day 1 y la obsesión por el cliente de Jeff Bezos sostienen el liderazgo mundial de Amazon, evaluando además su impacto en el bienestar y retención del talento humano.<br><br>
+      <a href="tfg%20DEFINNITIVO%20.pdf" download="TFG_Diana_Elena_Draguna_Liderazgo_Amazon.pdf" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-700 hover:bg-amber-600 text-white font-semibold text-xs">
+        <span>⬇️ Descargar Memoria Completa de mi TFG (PDF · 1.0 MB)</span>
+      </a>`
+    },
+
+    kedge: {
+      phrases: [
+        'triple corona', 'responsible management', 'luxury marketing', 'cross cultural',
+        'nota kedge', 'kedge bordeaux', 'erasmus kedge', 'francia kedge', 'burdeos kedge'
+      ],
+      tokens: [
+        'kedge', 'bordeaux', 'burdeos', 'francia', 'erasmus', 'intercambio', 'csr'
+      ],
+      response: `<strong>Mi Intercambio Erasmus en KEDGE Business School (Bordeaux, Francia):</strong><br><br>
+      • <strong>Periodo y Calificación:</strong> De febrero a mayo de 2025, superado con una sobresaliente <strong>nota media de 8,63 / 10</strong>.<br>
+      • <strong>Institución:</strong> Escuela acreditada con la prestigiosa <strong>Triple Corona internacional (EQUIS, AMBA, AACSB)</strong>.<br>
+      • <strong>Asignaturas que cursé íntegramente en inglés:</strong><br>
+        - <em>Responsible Management & CSR:</em> Modelos de negocio sostenibles y métricas ESG.<br>
+        - <em>Luxury Marketing:</em> Estrategia de valor, branding y posicionamiento de marcas globales.<br>
+        - <em>Cross-Cultural Management:</em> Negociación y liderazgo de equipos multiculturales.<br>
+        - <em>CSR & International Development:</em> Cadenas de valor éticas y desarrollo internacional.`
+    },
+
+    inmersion_irlanda: {
+      phrases: [
+        'estancia irlanda', 'viaje irlanda', 'bray dublin', 'estancia en irlanda', 'inmersion en irlanda'
+      ],
+      tokens: [
+        'irlanda', 'bray', 'dublin', 'inmersion', 'interway'
+      ],
+      response: `<strong>Mi Inmersión Lingüística en Bray & Dublín (Irlanda):</strong><br><br>
+      • <strong>Programa:</strong> Estancia intensiva de un mes organizada con la institución especializada Interway.<br>
+      • <strong>Competencias que desarrollé:</strong> Convivencia total en un entorno nativo anglófono, fortaleciendo mi autonomía personal, la resolución espontánea de situaciones cotidianas y mi soltura comunicativa en inglés profesional.`
+    },
+
+    idiomas: {
+      phrases: [
+        'hablas ingles', 'habla ingles', 'nivel de ingles', 'que idiomas', 'cuantos idiomas',
+        'perfil trilingue', 'idiomas que hablas', 'que idiomas hablas'
+      ],
+      tokens: [
+        'idioma', 'idiomas', 'lengua', 'lenguas', 'ingles', 'rumano', 'castellano',
+        'espanol', 'trilingue', 'bilingue'
+      ],
+      response: `<strong>Mi Perfil Lingüístico Trilingüe:</strong><br><br>
+      • <strong>Castellano:</strong> Lengua materna (nativo). Fluidez ejecutiva y presentaciones comerciales de alto impacto.<br>
+      • <strong>Rumano:</strong> Lengua materna (nativo). Bilingüismo natural y flexibilidad mental intercultural.<br>
+      • <strong>Inglés:</strong> Nivel intermedio/avanzado funcional (C1 de trabajo). Utilizado en mis asignaturas en Francia, mi estancia en Irlanda, lectura de documentación técnica y programación.`
+    },
+
+    habilidades_tecnicas: {
+      phrases: [
+        'hard skills', 'excel avanzado', 'power query', 'sabes programar', 'que sabes hacer',
+        'habilidades tecnicas', 'herramientas que dominas', 'que programas manejas', 'competencias analiticas',
+        'que herramientas dominas'
+      ],
+      tokens: [
+        'habilidades', 'habilidad', 'competencias', 'competencia', 'skills',
+        'herramientas', 'herramienta', 'programas', 'software', 'tecnologias',
+        'tecnologia', 'lenguajes', 'programar', 'programacion', 'tableau', 'r',
+        'sql', 'power bi', 'excel', 'dax', 'ga4'
+      ],
+      response: `<strong>Mis Competencias Analíticas, Herramientas y Metodologías:</strong><br><br>
+      Uno la solvencia cuantitativa de Data Science con la visión estratégica de ADE:<br><br>
+      • <strong>Programación & Datos:</strong> Python (Pandas, NumPy, scripts ETL en Spyder), R (modelación econométrica y estadística multivariante).<br>
+      • <strong>Sistemas de Gestión ERP:</strong> SAP ERP (módulos comercial y de facturación), IBIS Sales Intelligence.<br>
+      • <strong>Business Intelligence & Reporting:</strong> Microsoft Power BI (modelado relacional en DAX y Power Query), Google Analytics 4 (GA4, eventos y conversión).<br>
+      • <strong>Modelado Financiero:</strong> Microsoft Excel Avanzado (tablas dinámicas complejas, modelos de márgenes y fórmulas analíticas).<br>
+      • <strong>Cloud & IA:</strong> Microsoft Azure Fundamentals (AZ-900) y Azure AI Fundamentals (AI-900).<br>
+      • <strong>Metodología de Procesos:</strong> Diagramación As-Is / To-Be, especificaciones funcionales y planes de prueba UAT.`
+    },
+
+    certificaciones: {
+      phrases: [
+        'titulos oficiales', 'google analytics', 'excel associate', 'microsoft certified',
+        'certificaciones tecnicas', 'certificados oficiales', 'cuales son tus certificaciones'
+      ],
+      tokens: [
+        'certificacion', 'certificaciones', 'certificados', 'certificado', 'credenciales',
+        'azure', 'az900', 'ai900'
+      ],
+      response: `<strong>Mis 5 Certificaciones Técnicas Oficiales:</strong><br><br>
+      1. <strong>Microsoft Azure Fundamentals (AZ-900, 2026):</strong> Conceptos de nube, arquitectura, infraestructura y gobierno del dato.<br>
+      2. <strong>Microsoft Azure AI Fundamentals (AI-900, 2026):</strong> Machine Learning, Computer Vision y principios éticos de IA responsable.<br>
+      3. <strong>Google Analytics Certificate (GA4, 2025):</strong> Medición de eventos web, embudos de conversión y audiencias.<br>
+      4. <strong>Power BI Dashboard Creation (ESIC, 2024):</strong> Extracción Power Query, modelado DAX y cuadros de mando interactivos.<br>
+      5. <strong>Microsoft Excel Associate (2023):</strong> Fórmulas avanzadas, modelado financiero y análisis dinámico de datos.`
+    },
+
+    deportes_liderazgo: {
+      phrases: [
+        'ciudad de la raqueta', 'sagrado corazon', 'la salle', 'liderazgo deportivo', 'disciplina deportiva',
+        'experiencia en deportes', 'capitana baloncesto'
+      ],
+      tokens: [
+        'deporte', 'deportes', 'baloncesto', 'basket', 'capitana', 'capitan',
+        'natacion', 'nadar', 'tenis', 'competitivo', 'competicion'
+      ],
+      response: `<strong>Mi Liderazgo y Disciplina Deportiva:</strong><br><br>
+      • <strong>Baloncesto (Capitana del Equipo Escolar):</strong> En La Salle Sagrado Corazón. Desarrollé mi capitanía, liderazgo motivacional, toma de decisiones rápidas bajo presión de marcador y fomento de la cohesión grupal.<br>
+      • <strong>Natación y Tenis de Competición:</strong> En Ciudad de la Raqueta y torneos escolares. Disciplina de entrenamiento estricta, alta tolerancia a la frustración y hábito de superación constante.`
+    },
+
+    voluntariado: {
+      phrases: [
+        'compromiso social', 'sant egidio', 'personas mayores', 'sin hogar', 'comedor social',
+        'has hecho voluntariado', 'accion social'
+      ],
+      tokens: [
+        'voluntariado', 'voluntaria', 'egidio', 'amavir', 'masesic', 'solidario', 'solidaridad'
+      ],
+      response: `<strong>Mi Compromiso Social y Voluntariado:</strong><br><br>
+      • <strong>Comunidad de Sant'Egidio:</strong> Preparación y reparto directo de alimentos para personas en situación de calle y apoyo organizativo en comedores navideños en Madrid.<br>
+      • <strong>Residencia Amavir Pozuelo (MásESIC):</strong> Acompañamiento afectivo y dinamización de talleres para personas mayores, fortaleciendo mi empatía y la escucha activa intergeneracional.`
+    },
+
+    por_que_contratar: {
+      phrases: [
+        'por que contratar', 'por que deberiamos contratar', 'por que elegirte',
+        'valor diferencial', 'que aportas', 'por que tu', 'por que diana', 'resumen ejecutivo',
+        'quien eres', 'hablame de ti', 'sobre ti', 'por que contratarte', 'que soluciones das',
+        'tus fortalezas', 'cualidades de diana'
+      ],
+      tokens: [
+        'contratar', 'contratacion', 'fortalezas', 'cualidades', 'ventaja', 'ventajas',
+        'solucion', 'soluciones', 'perfil'
+      ],
+      response: `<strong>Mi Valor Diferencial (¿Por qué incorporarme a tu equipo?):</strong><br><br>
+      1. <strong>Iniciativa y Autonomía Demostrada:</strong> En Carrefour identifiqué tareas manuales ineficientes y programé 6 procesos en Python ahorrando un 85% de tiempo manual sin requerir supervisión técnica previa.<br>
+      2. <strong>Perfil Híbrido Negocio + Data Science:</strong> Entiendo los estados financieros y la estrategia comercial, y sé traducirlos en código, dashboards y modelos predictivos.<br>
+      3. <strong>Rigor Financiero en Controlling:</strong> Experiencia práctica en auditoría de márgenes comerciales, liquidación de rappels y cierres mensuales en Campofrío.<br>
+      4. <strong>Perfil Internacional y Trilingüe:</strong> Nota sobresaliente de 8,63/10 en KEDGE Business School (Francia), estancia en Irlanda y dominio fluido de Castellano, Rumano e Inglés.<br>
+      5. <strong>Liderazgo y Disciplina:</strong> He sido capitana de equipo deportivo, cuento con alta tolerancia a la presión y mentalidad orientada a la superación.`
+    },
+
+    contacto: {
+      phrases: [
+        'donde vives', 'hablar contigo', 'como contactar', 'datos de contacto', 'tu telefono', 'tu email'
+      ],
+      tokens: [
+        'contacto', 'contactar', 'telefono', 'movil', 'celular', 'whatsapp', 'whas',
+        'email', 'correo', 'ciudad', 'madrid', 'linkedin', 'redes', 'llamar'
+      ],
+      response: `<strong>Mis Canales de Contacto Directo:</strong><br><br>
+      • <strong>WhatsApp / Teléfono:</strong> <a href="https://wa.me/34680198467" target="_blank" class="text-amber-700 underline font-semibold">+34 680 19 84 67</a><br>
+      • <strong>Email Directo:</strong> <a href="mailto:dragunadianaelena@gmail.com" class="text-amber-700 underline font-semibold">dragunadianaelena@gmail.com</a><br>
+      • <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dianaelenadraguna" target="_blank" class="text-amber-700 underline font-semibold">linkedin.com/in/dianaelenadraguna</a><br>
+      • <strong>Ubicación:</strong> Madrid, España.<br><br>
+      <a href="https://wa.me/34680198467" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs">
+        <span>💬 Abrirme un Chat de WhatsApp Directo</span>
+      </a>`
+    },
+
+    videos_presentacion: {
+      phrases: [
+        'elevator pitch', 'ver video', 'videos de diana', 'tienes videos', 'video de presentacion',
+        'video habilidades', 'video proyecto', 'reproducir video', 'video carrefour', 'donde estan los videos',
+        'cuales son los videos', 'que videos hay', 'tus videos'
+      ],
+      tokens: [
+        'video', 'videos', 'pitch', 'grabacion', 'grabaciones', 'audiovisual', 'reproductor', 'reproducir'
+      ],
+      response: `<strong>Mis Vídeos Oficiales en este Portfolio:</strong><br><br>
+      Puedes reproducir <strong>3 vídeos integrados en alta definición</strong> a lo largo de mi web:<br><br>
+      1. 🎬 <strong>Elevator Pitch (Introducción):</strong> En la cabecera principal. Expongo mi perfil directivo, visión de negocio y competencias cuantitativas.<br>
+      2. 📊 <strong>Proyecto Destacado (Carrefour PASS):</strong> En la sección de Proyectos. Demostración en sala directiva del cuadro de mando interactivo y automatización Python (-85% tiempo).<br>
+      3. 💻 <strong>Habilidades Técnicas & Data Science:</strong> En la sección de Habilidades. Interacción con dashboards avanzados, arquitecturas neuronales y entornos Cloud/IA.<br><br>
+      <span class="text-xs text-stone-500">Accede directamente a cada sección para reproducirlos:</span><br>
+      <div class="flex flex-wrap gap-1.5 pt-2">
+        <a href="#hero" class="px-2.5 py-1 rounded-lg bg-amber-700 text-white text-xs font-semibold hover:bg-amber-600 transition-colors">▶ Ver Elevator Pitch</a>
+        <a href="#proyectos" class="px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors">▶ Ver Vídeo Proyecto</a>
+        <a href="#habilidades" class="px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors">▶ Ver Vídeo Habilidades</a>
+      </div>`
+    },
+
+    saludo: {
+      phrases: [
+        'buenos dias', 'buenas tardes', 'buenas noches', 'como estas', 'quien eres', 'hola'
+      ],
+      tokens: [
+        'hola', 'que tal', 'ayuda', 'saludos', 'hey'
+      ],
+      response: `¡Hola! 👋 Soy <strong>Diana Elena Draguna</strong>.<br><br>
+      Puedo darte <strong>respuestas directas en primera persona</strong> sobre mi trayectoria profesional y académica:<br>
+      • Mi experiencia en <strong>Carrefour</strong> (donde automaticé 6 procesos en Python ahorrando un 85% de tiempo manual), <strong>Campofrío</strong> (controlling y cierres en SAP) y <strong>El Corte Inglés</strong> (procesos y UAT).<br>
+      • Mi <strong>Doble Grado en ADE & Data Science</strong> en ESIC y mi nota media de <strong>8,63 en KEDGE Bordeaux</strong>.<br>
+      • Mi <strong>TFG sobre Amazon</strong> o cómo afronto <strong>mis mayores retos profesionales</strong>.<br>
+      • Mis <strong>vídeos demostrativos</strong> (Elevator Pitch, Proyecto Carrefour y Habilidades).<br><br>
+      ¿Qué aspecto te gustaría consultarme?`
+    }
+  };
+
+  // Motor de Inferencia y Puntuación en 1ª Persona
+  function generateFirstPersonSolutionResponse(rawInput) {
+    const q = normalizeText(rawInput);
+    if (!q) return intentKnowledge.saludo.response;
+
+    const scores = {};
+    for (const [intentKey, conf] of Object.entries(intentKnowledge)) {
+      scores[intentKey] = 0;
+
+      for (const phrase of conf.phrases) {
+        const normPhrase = normalizeText(phrase);
+        if (q.includes(normPhrase)) {
+          scores[intentKey] += 15;
+        }
+      }
+
+      for (const token of conf.tokens) {
+        const normToken = normalizeText(token);
+        if (normToken.includes(' ')) {
+          if (q.includes(normToken)) {
+            scores[intentKey] += 3;
+          }
+        } else {
+          const regex = new RegExp(`\\b${normToken}\\b`, 'i');
+          if (regex.test(q)) {
+            scores[intentKey] += 2;
+          }
+        }
+      }
+    }
+
+    const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+    const [bestIntent, bestScore] = sorted[0];
+
+    if (bestScore >= 4) {
+      return intentKnowledge[bestIntent].response;
+    }
+
+    // Respuesta profesional por defecto (estricta fidelidad al perfil)
+    return `<strong>Información de mi perfil profesional:</strong><br><br>
+    No tengo registrado ese dato específico en mi información pública de este portfolio. Como profesional, prefiero no especular ni inventar información que no conste en mis evidencias oficiales.<br><br>
+    Estaré encantada de responderte personalmente si me contactas a través de:<br>
+    • <strong>WhatsApp:</strong> <a href="https://wa.me/34680198467" target="_blank" class="text-amber-700 underline font-semibold">+34 680 19 84 67</a><br>
+    • <strong>Email:</strong> <a href="mailto:dragunadianaelena@gmail.com" class="text-amber-700 underline font-semibold">dragunadianaelena@gmail.com</a><br><br>
+    También puedes consultar directamente los temas principales de mi perfil con estos accesos rápidos:<br>
+    <div class="flex flex-wrap gap-1.5 pt-2">
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="experiencia laboral">Mi Experiencia</button>
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="que es lo mas dificil que has hecho">Mis Mayores Retos</button>
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="videos de diana">Mis Vídeos</button>
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="estudios">Mis Estudios</button>
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="habilidades tecnicas">Mis Herramientas</button>
+      <button class="chat-chip-inline px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold hover:border-amber-600 transition-colors" data-query="por que contratar">Por qué contratarme</button>
+    </div>`;
+  }
+}
+
+/* ==========================================================================
+   9. SISTEMA DE MODALES LIGHTBOX PARA TFG, VÍDEOS Y CERTIFICACIONES
+   ========================================================================== */
+const modalDatabase = {
+  tfg: {
+    tag: 'TRABAJO DE FIN DE GRADO (TFG)',
+    title: 'Impacto del Liderazgo en Amazon',
+    subtitle: 'Grado en Administración y Dirección de Empresas · ESIC University (2025/2026)',
+    badge: 'Investigación Empírica · 170 Encuestas · 37 Páginas',
+    content: `
+      <div class="space-y-5 text-xs sm:text-sm text-stone-700 dark:text-stone-300">
+        <div class="p-4 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 space-y-2">
+          <div class="flex flex-wrap items-center justify-between text-xs gap-2">
+            <span class="font-bold text-amber-800 dark:text-amber-300">Autores: Diana Elena Draguna & María José Gutiérrez</span>
+            <span class="text-stone-500 font-mono">Tutor: Luciano López Gómez</span>
+          </div>
+          <h4 class="text-base font-bold text-stone-900 dark:text-white">“Impacto del Liderazgo en Amazon: Cultura, Innovación y Gestión del Talento”</h4>
+          <p class="text-xs text-stone-600 dark:text-stone-400">ESIC University · Curso Académico 2025/2026 · Autorizada publicación en Biblioteca ESIC</p>
+        </div>
+
+        <div class="space-y-2">
+          <h5 class="font-bold text-stone-900 dark:text-white uppercase tracking-wider text-xs">Resumen Ejecutivo del Proyecto:</h5>
+          <p class="leading-relaxed text-xs">
+            Este estudio analiza cómo el estilo de liderazgo de Amazon, con especial foco en la filosofía transformacional de Jeff Bezos, ha permitido la evolución desde una tienda digital de libros hasta un líder tecnológico global de la economía digital.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-white block mb-1">Muestra Estadística</strong>
+            <span class="text-amber-700 dark:text-amber-400 font-bold text-base block">170 Participantes</span>
+            <span class="text-[11px] text-stone-500">Cuestionario cuantitativo con escala Likert de 5 puntos.</span>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-white block mb-1">Metodología Mixta</strong>
+            <span class="text-teal-700 dark:text-teal-400 font-bold text-base block">Datos + Cualitativo</span>
+            <span class="text-[11px] text-stone-500">Combinación de estadística y entrevistas internas a empleados.</span>
+          </div>
+          <div class="p-3 rounded-lg bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+            <strong class="text-stone-900 dark:text-white block mb-1">Pilares Clave</strong>
+            <span class="text-stone-900 dark:text-white font-bold text-base block">Obsesión Cliente</span>
+            <span class="text-[11px] text-stone-500">Cultura "Day 1", innovación constante y escalabilidad.</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-stone-100 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 space-y-2">
+          <h5 class="font-bold text-stone-900 dark:text-white text-xs uppercase tracking-wider">Conclusiones Clave del Estudio:</h5>
+          <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed">
+            Los hallazgos confirman que la cultura de planificación a largo plazo y la capacidad de adaptación al entorno son determinantes para sostener ventajas competitivas sostenibles. Se examinan además las implicaciones directas en el bienestar laboral y las políticas de retención del talento humano en entornos de alta exigencia.
+          </p>
+        </div>
+
+        <!-- Botón de Descarga Directa del PDF Oficial -->
+        <div class="pt-2 text-center">
+          <a href="tfg%20DEFINNITIVO%20.pdf" download="TFG_Diana_Elena_Draguna_Liderazgo_Amazon.pdf" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-700 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:scale-105">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Descargar Memoria Completa de mi TFG (PDF · 1.0 MB)</span>
+          </a>
+        </div>
+      </div>
+    `
+  },
+
+  pitch: {
+    tag: 'VÍDEO DE INTRODUCCIÓN · ELEVATOR PITCH',
+    title: 'Presentación Ejecutiva · Diana Elena Draguna',
+    subtitle: 'Resolución de problemas mediante Data Science, Automatización y Rigor de Negocio',
+    badge: 'Vídeo Oficial · 16:9',
+    content: `
+      <div class="space-y-4">
+        <div class="relative bg-stone-900 rounded-xl overflow-hidden aspect-video border border-stone-700 shadow-xl">
+          <video controls autoplay class="w-full h-full object-cover" poster="images/poster_elevator_pitch.jpg">
+            <source src="video/elevator_pitch.mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de vídeo.
+          </video>
+        </div>
+        <p class="text-xs text-stone-600 dark:text-stone-300">"Mi meta profesional es conectar el rigor de los datos con el impacto directo en la toma de decisiones empresariales y la optimización de procesos."</p>
+      </div>
+    `
+  },
+
+  video_proyecto: {
+    tag: 'PROYECTO DESTACADO · VÍDEO DEMO',
+    title: 'Automatización & Reporting Comercial Carrefour PASS',
+    subtitle: 'Presentación de Resultados y Toma de Decisiones en Entorno Directivo',
+    badge: 'Vídeo Oficial · 16:9',
+    content: `
+      <div class="space-y-4">
+        <div class="relative bg-stone-900 rounded-xl overflow-hidden aspect-video border border-stone-700 shadow-xl">
+          <video controls autoplay class="w-full h-full object-cover" poster="images/poster_proyecto.jpg">
+            <source src="video/proyecto_destacado.mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de vídeo.
+          </video>
+        </div>
+        <p class="text-xs text-stone-600 dark:text-stone-300">Demostración ejecutiva del cuadro de mando interactivo y reducción del 85% en tiempo de reportería para Carrefour PASS.</p>
+      </div>
+    `
+  },
+
+  video_habilidades: {
+    tag: 'HABILIDADES TÉCNICAS · VÍDEO DEMO',
+    title: 'Entorno Analítico, Redes Neuronales & Modelado de Datos',
+    subtitle: 'Interacción con Dashboards Avanzados, Inteligencia Artificial y Cloud',
+    badge: 'Vídeo Oficial · 16:9',
+    content: `
+      <div class="space-y-4">
+        <div class="relative bg-stone-900 rounded-xl overflow-hidden aspect-video border border-stone-700 shadow-xl">
+          <video controls autoplay class="w-full h-full object-cover" poster="images/poster_habilidades.jpg">
+            <source src="video/habilidades.mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de vídeo.
+          </video>
+        </div>
+        <p class="text-xs text-stone-600 dark:text-stone-300">Demostración práctica de arquitecturas neuronales, modelado estadístico en Python y visualización analítica de datos.</p>
+      </div>
+    `
+  },
+
+  certifications: {
+    tag: 'CREDENCIALES OFICIALES',
+    title: 'Certificaciones Tecnológicas y Profesionales',
+    subtitle: 'Microsoft, Google y ESIC University',
+    badge: 'Cloud · Inteligencia Artificial · Analítica Web · BI',
+    content: `
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+        <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800/50">
+          <span class="text-amber-700 dark:text-amber-400 font-bold block mb-1">Microsoft Azure Fundamentals (AZ-900, 2026)</span>
+          <p class="text-stone-600 dark:text-stone-400">Arquitectura cloud, gobernanza del dato, servicios de red y modelos de coste en la nube.</p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800/50">
+          <span class="text-amber-700 dark:text-amber-400 font-bold block mb-1">Microsoft Azure AI Fundamentals (AI-900, 2026)</span>
+          <p class="text-stone-600 dark:text-stone-400">Cargas de trabajo de Machine Learning, Computer Vision y principios de IA responsable.</p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800/50">
+          <span class="text-teal-700 dark:text-teal-400 font-bold block mb-1">Google Analytics Certificate (GA4, 2025)</span>
+          <p class="text-stone-600 dark:text-stone-400">Medición de eventos web, embudos de conversión, audiencias y atribución de campañas.</p>
+        </div>
+        <div class="p-3.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-800/50">
+          <span class="text-teal-700 dark:text-teal-400 font-bold block mb-1">Power BI Dashboard Creation (ESIC, 2024)</span>
+          <p class="text-stone-600 dark:text-stone-400">Modelado de datos en DAX, Power Query y diseño de cuadros de mando ejecutivos.</p>
+        </div>
+      </div>
+    `
+  }
+};
+
+function initModalSystem() {
+  const modalBackdrop = document.getElementById('evidence-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const modalBadge = document.getElementById('modal-badge');
+  const modalBody = document.getElementById('modal-body');
+
+  if (!modalBackdrop) return;
+
+  document.querySelectorAll('[data-evidence]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const evidenceKey = trigger.getAttribute('data-evidence');
+      const data = modalDatabase[evidenceKey];
+
+      if (data) {
+        modalTag.textContent = data.tag;
+        modalTitle.textContent = data.title;
+        modalSubtitle.textContent = data.subtitle;
+        modalBadge.textContent = data.badge;
+        modalBody.innerHTML = data.content;
+
+        modalBackdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeModal() {
+    modalBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+    const modalVideo = modalBackdrop.querySelector('video');
+    if (modalVideo) modalVideo.pause();
+  }
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeModal);
+  }
+
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('active')) {
+      closeModal();
+    }
+  });
+}
+
+/* ==========================================================================
+   10. PORTAPAPELES Y NOTIFICACIONES TOAST
+   ========================================================================== */
+function initClipboardButtons() {
+  const copyEmailBtns = document.querySelectorAll('.copy-email-btn');
+  const copyPhoneBtns = document.querySelectorAll('.copy-phone-btn');
+
+  copyEmailBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = 'dragunadianaelena@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('✓ Email copiado: dragunadianaelena@gmail.com');
+      }).catch(() => {
+        prompt('Copia el email:', email);
+      });
+    });
+  });
+
+  copyPhoneBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const phone = '+34680198467';
+      navigator.clipboard.writeText(phone).then(() => {
+        showToast('✓ Teléfono copiado: +34 680 19 84 67');
+      }).catch(() => {
+        prompt('Copia el teléfono:', phone);
+      });
+    });
+  });
+}
+
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-2xl font-medium text-xs flex items-center gap-2 border border-stone-700 dark:border-stone-300 transition-all duration-300';
+    document.body.appendChild(toast);
+  }
+
+  toast.innerHTML = `<span>${message}</span>`;
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
+</script>
+</body>
+</html>
